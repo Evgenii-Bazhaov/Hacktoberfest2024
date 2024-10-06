@@ -1,7 +1,7 @@
 ## Hacktoberfest-2024
 
 
-# Submit your PR on this new repo [Hacktoberfest](https://github.com/fineanmol/hacktoberfest). We are merging all PRs there.
+# Submit your PR on this new repo [Hacktoberfest](https://github.com/Evgenii-Bazhaov/Hacktoberfest2024). We are merging all PRs there.
 
 In this current repo, there are a lot of conflicts; we are not merging until all conflicts are resolved. Hacktoberfest { [Live Website](https://Evgenii-Bazhaov/Hacktoberfest2024/) }
 
