@@ -34,7 +34,7 @@ Hacktoberfest 2024
 - Clone it on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2024.git
+git clone https://github.com/Evgenii-Bazhaov/Hacktoberfest2024.git
 ```
 
 - Navigate to the project directory.
@@ -76,7 +76,7 @@ git push origin my-new-branch
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PRs may be merged while you're working on your branch/fork.   
 
 ```terminal
-git remote add upstream https://github.com/fineanmol/Hacktoberfest2024
+git remote add upstream https://github.com/Evgenii-Bazhaov/Hacktoberfest2024
 ```
 
 You can verify that the new remote has been added by typing:
