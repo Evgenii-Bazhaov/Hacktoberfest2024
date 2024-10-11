@@ -6,6 +6,33 @@ Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is 
 <div align = "left">
 <br>
 
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+            <td><b>🛠 Languages</b></td>
+            <td><b>🌐 Contributors </b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+            <td><img alt="Forks" src="https://img.shields.io/github/forks/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&color=critical&logo=github"></td>
+           <td><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Evgenii-Bazhaov/Hacktoberfest2024?color=2b9348"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<br>
+
 
 # Submit your PR on this new repo [Hacktoberfest](https://github.com/Evgenii-Bazhaov/Hacktoberfest2024). We are merging all PRs there.
 
