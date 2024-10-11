@@ -29,7 +29,8 @@ Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is 
 
 ## Getting Started 🤩🤗:
 
-- Fork this repo (button on top)
+- Fork the repo (button on top)
+- Star the repo ✨
 - Clone it on your local machine
 
 ```terminal
