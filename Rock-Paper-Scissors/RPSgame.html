@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="external stylesheet" href="RPSgame.css">
+    </head>
+    <body>
+        <p class="heading">Rock Paper Scissors</p>
+        <button class="rock" onclick="
+         game('rock');
+        "><i class="fa-solid fa-mountain fa-2xl"></i></button>
+        <button class="paper" onclick="
+         game('paper');
+        "><i class="fa-solid fa-sheet-plastic fa-2xl"></i></button>
+        <button class="scissors" onclick="
+         game('scissors');
+        "><i class="fa-solid fa-scissors fa-2xl"></i></button>
+        <p class="js-result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score"></p>
+        <button class="reset" onclick="
+         score = {
+                Wins : 0,
+                Losses : 0,
+                Draws : 0
+            };
+         localStorage.removeItem('score');
+         updateScoreElement();
+         document.querySelector('.js-moves').innerHTML = '';
+         document.querySelector('.js-result').innerHTML = '';
+            ">Reset Score</button>
+
+<script src="RPSgame.js"></script>
+   
+<script src="https://kit.fontawesome.com/005389cfb1.js" crossorigin="anonymous"></script>
+    </body>
+</html>
