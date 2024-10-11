@@ -4,6 +4,9 @@
 
 Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is a fun and beginner-friendly repository designed for you to make your very first Pull Request (PR) and join the world of open source! 🌍✨ 
 <div align = "left">
+
+## Submit your PR on this new repo [Hacktoberfest](https://github.com/Evgenii-Bazhaov/Hacktoberfest2024). We are merging all PRs there.
+
 <br>
 
 <table align="center">
@@ -34,7 +37,6 @@ Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is 
 <br>
 
 
-# Submit your PR on this new repo [Hacktoberfest](https://github.com/Evgenii-Bazhaov/Hacktoberfest2024). We are merging all PRs there.
 
 **This is a beginner-friendly project to help you get started with your [Hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below and read the contribution rules. Happy Learning <3 💙 !!**
 
