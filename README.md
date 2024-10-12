@@ -1,16 +1,45 @@
-## Hacktoberfest-2024
+# 🎃 Welcome to **HacktoberFest Contribution 2024**! 🎃  
+[![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-2024-yellow?style=for-the-badge)](https://hacktoberfest.com)  
+[![Star this Repo](https://img.shields.io/github/stars/Evgenii-Bazhaov/Hacktoberfest2024?style=social)](https://github.com/Evgenii-Bazhaov/Hacktoberfest2024)
+
+Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is a fun and beginner-friendly repository designed for you to make your very first Pull Request (PR) and join the world of open source! 🌍✨ 
+<div align = "left">
+
+## Submit your PR on this new repo [Hacktoberfest](https://github.com/Evgenii-Bazhaov/Hacktoberfest2024). We are merging all PRs there.
+
+<br>
+
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+            <td><b>🛠 Languages</b></td>
+            <td><b>🌐 Contributors </b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+            <td><img alt="Forks" src="https://img.shields.io/github/forks/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Evgenii-Bazhaov/Hacktoberfest2024?style=flat&color=critical&logo=github"></td>
+           <td><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Evgenii-Bazhaov/Hacktoberfest2024?color=2b9348"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<br>
 
 
-# Submit your PR on this new repo [Hacktoberfest](https://github.com/Evgenii-Bazhaov/Hacktoberfest2024). We are merging all PRs there.
-
-In this current repo, there are a lot of conflicts; we are not merging until all conflicts are resolved. Hacktoberfest { [Live Website](https://Evgenii-Bazhaov/Hacktoberfest2024/) }
 
 **This is a beginner-friendly project to help you get started with your [Hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below and read the contribution rules. Happy Learning <3 💙 !!**
 
-P.S. Star ⭐ and share this repository if you had fun!! 😍
-
-Hacktoberfest 2024
-![Event Completed](/scripts/Event_Completed_.png)
 
 # 📌 Videos 📽️:
 
@@ -29,7 +58,8 @@ Hacktoberfest 2024
 
 ## Getting Started 🤩🤗:
 
-- Fork this repo (button on top)
+- Fork the repo (button on top)
+- Star the repo ✨
 - Clone it on your local machine
 
 ```terminal
@@ -125,8 +155,19 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited, and the merge conflicts are horrible :astonished: <3*
 <br>
 
-## Our Top Contributors 
+## Top Contributors
 
-<p align="center"><a href="https://github.com/Evgenii-Bazhaov/Hacktoberfest2024/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=fEvgenii-Bazhaov/Hacktoberfest2024" max={1000} columns={100} anon={1}/>
-</a></p>
+A heartfelt thank you to the following individuals for their valuable contributions to this project. Your support and dedication are greatly appreciated:
+
+<a href="https://github.com/Evgenii-Bazhaov/Hacktoberfest2024/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024" />
+</a>
+
+<br>
+
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
+
