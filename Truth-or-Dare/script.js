@@ -66,7 +66,6 @@ const truth = [
     "What's the most unusual pet you would want to own?",
     "Have you ever regretted a hairstyle choice?"
 ];
-
 const dare = [
    "Dance in public for one minute.",
     "Send a funny meme to the fifth person in your contact list.",
