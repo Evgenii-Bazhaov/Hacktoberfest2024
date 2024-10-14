@@ -1,0 +1,198 @@
+Here's a simple **Temperature Converter** application using HTML, CSS, and JavaScript. This app will allow users to convert temperatures between Celsius, Fahrenheit, and Kelvin.
+
+### 1. **HTML** (index.html)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Temperature Converter</h1>
+        <div class="input-section">
+            <input type="number" id="temp-input" placeholder="Enter temperature">
+            <select id="temp-unit">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <button id="convert-btn">Convert</button>
+        </div>
+        <div class="result-section">
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+### 2. **CSS** (styles.css)
+
+```css
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Main Container */
+.converter-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input section */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#temp-input {
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+#temp-unit {
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#convert-btn {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#convert-btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 18px;
+    color: #333;
+}
+```
+
+### 3. **JavaScript** (script.js)
+
+```javascript
+// Select Elements
+const convertButton = document.getElementById('convert-btn');
+const tempInput = document.getElementById('temp-input');
+const tempUnit = document.getElementById('temp-unit');
+const resultDisplay = document.getElementById('result');
+
+// Function to convert temperatures
+function convertTemperature() {
+    const tempValue = parseFloat(tempInput.value);
+    const selectedUnit = tempUnit.value;
+    
+    if (isNaN(tempValue)) {
+        alert('Please enter a valid temperature');
+        return;
+    }
+
+    let celsius, fahrenheit, kelvin;
+
+    if (selectedUnit === 'Celsius') {
+        celsius = tempValue;
+        fahrenheit = (tempValue * 9/5) + 32;
+        kelvin = tempValue + 273.15;
+    } else if (selectedUnit === 'Fahrenheit') {
+        celsius = (tempValue - 32) * 5/9;
+        fahrenheit = tempValue;
+        kelvin = celsius + 273.15;
+    } else if (selectedUnit === 'Kelvin') {
+        celsius = tempValue - 273.15;
+        fahrenheit = (celsius * 9/5) + 32;
+        kelvin = tempValue;
+    }
+
+    // Display the result
+    resultDisplay.innerHTML = `
+        <strong>${tempValue} ${selectedUnit} is equal to:</strong><br>
+        ${celsius.toFixed(2)} Celsius<br>
+        ${fahrenheit.toFixed(2)} Fahrenheit<br>
+        ${kelvin.toFixed(2)} Kelvin
+    `;
+}
+
+// Event listener for the Convert button
+convertButton.addEventListener('click', convertTemperature);
+```
+
+### Explanation:
+
+1. **HTML**:
+   - A basic form includes an input field for temperature, a dropdown to select the unit (Celsius, Fahrenheit, Kelvin), and a button to trigger the conversion.
+   - The results are displayed in the `#result` section.
+
+2. **CSS**:
+   - Simple styling for the form, button, and result section to make it look clean and centered.
+
+3. **JavaScript**:
+   - The `convertTemperature()` function checks the selected unit and converts the entered temperature to the other two units.
+   - Conversion formulas are:
+     - **Celsius to Fahrenheit**: `(C * 9/5) + 32`
+     - **Celsius to Kelvin**: `C + 273.15`
+     - **Fahrenheit to Celsius**: `(F - 32) * 5/9`
+     - **Fahrenheit to Kelvin**: First convert Fahrenheit to Celsius, then Celsius to Kelvin.
+     - **Kelvin to Celsius**: `K - 273.15`
+     - **Kelvin to Fahrenheit**: First convert Kelvin to Celsius, then Celsius to Fahrenheit.
+   - The result is shown dynamically when the user clicks the "Convert" button.
+
+### Example Use:
+1. The user enters a temperature (e.g., `25`) and selects the unit (e.g., `Celsius`).
+2. When the user clicks the **Convert** button, the app displays the equivalent temperatures in Fahrenheit and Kelvin.
+
+### Features to Add:
+- **Input Validation**: Further enhance validation (e.g., no negative values for Kelvin).
+- **Unit Symbols**: Add unit symbols (°C, °F, K) to make the result display more professional.
+- **CSS Improvements**: Add transitions, hover effects, or improve the layout for better visual appeal.
+
+You now have a working **Temperature Converter** app! Let me know if you'd like to make any adjustments or additions.
