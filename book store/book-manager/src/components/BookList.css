@@ -1,0 +1,141 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Styling */
+.book-list-container {
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f4f4f9, #ddd6f3);
+  min-height: 100vh;
+}
+
+/* Book List Title */
+.book-list-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4a4e69;
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Book List */
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Each Book Item */
+.book-list-item {
+  background-color: #9a8c98;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1.2s ease-out;
+}
+
+.book-list-item:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Book Information */
+.book-info {
+  flex: 1;
+}
+
+.book-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+}
+
+.book-info p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Book Actions (Edit & Delete Buttons) */
+.book-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.book-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-actions .edit {
+  background-color: #88d3ce;
+  color: #fff;
+}
+
+.book-actions .edit:hover {
+  background-color: #6e45e2;
+}
+
+.book-actions .delete {
+  background-color: #d90429;
+  color: #fff;
+}
+
+.book-actions .delete:hover {
+  background-color: #ef233c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Sort Container Styling */
+.sort-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sort-container label {
+    font-size: 1.2rem;
+    color: #4a4e69;
+    margin-right: 10px;
+  }
+  
+  .sort-container select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
