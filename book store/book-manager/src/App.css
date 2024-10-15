@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #4a4e69;
+  margin-bottom: 15px;
+}
+
+
+/* Buttons */
+button {
+  background-color: #4a4e69;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #22223b;
+}
+
+/* Book List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #9a8c98;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li h3, li p {
+  color: #fff;
+}
+
+button.delete {
+  background-color: #d90429;
+  margin: 5px;
+}
+
+button:hover.delete {
+  background-color: #ef233c;
+}
+/* Glassmorphism Navbar */
+.navbar {
+  background: rgba(198, 34, 34, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur the background behind the navbar */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  padding: 15px 30px;
+  color: rgb(233, 116, 15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar a {
+
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f2e9e4;
+}
+
+/* Responsive Menu */
+.navbar a {
+  padding: 10px;
+}
+
+/* Navbar Flexbox for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+}
