@@ -1,0 +1,75 @@
+body {	
+  background-color: rgb(214, 214, 214);
+}
+
+.container {
+	width: 250px;
+	height: 400px;
+	margin: 80px auto;
+	border-radius: 10px;
+	background-color: rgb(214, 214, 214);
+
+	/* box-shadow is used to achieve Neumorphism 
+	by using a light shadow and a dark shadow*/
+	box-shadow: 5px 5px 10px #b6a9a9,
+		-5px -5px 10px #ffffff;
+}
+
+.cal-box {
+	width: 200px;
+	margin: 20px auto;
+}
+
+#display {
+	border: none;
+	outline: none;
+	color: black;
+	text-align: right;
+	font-weight: 600;
+	padding: 15px;
+	margin: 30px 0 20px 0;
+	background: transparent;
+
+	/* Inset shadow gives the appearance that 
+	the element is being pressed into it.*/
+	box-shadow: inset 2px 2px 5px #babecc,
+		inset -5px -5px 10px #ffffff;
+}
+
+.button {
+	margin: 15px 0 0 5px;
+	width: 42px;
+	height: 42px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 8px;
+	background-color: rgb(214, 214, 214);
+
+	/* box-shadow is used to achieve Neumorphism 
+	by using a light shadow and a dark shadow */
+	box-shadow: 5px 5px 10px #b6acac,
+		-5px -5px 10px #faf4f4;
+	display: inline-block;
+}
+
+.button:active {
+
+	/* When the button is pressed, the inset 
+	shadow provides the impression that the 
+	element is being pressed into it */
+	box-shadow: inset 1px 1px 2px #babecc,
+		inset -1px -1px 2px #fff;
+}
+
+.clearButton {
+	color: white;
+	background-color: red;
+}
+
+.mathbutton {
+	color: white;
+	background-color: black;
+}
