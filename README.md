@@ -155,7 +155,7 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited, and the merge conflicts are horrible :astonished: <3*
 <br>
 
-## Our Contributors
+## Top Contributors
 
 A heartfelt thank you to the following individuals for their valuable contributions to this project. Your support and dedication are greatly appreciated:
 
