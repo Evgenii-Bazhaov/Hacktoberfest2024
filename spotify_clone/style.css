@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.buttons {
+  cursor: pointer;
+}
+
+nav {
+  font-family: "Playwrite DE Grund";
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style-type: none;
+  height: 47px;
+  background-color: black;
+  color: white;
+}
+
+nav ul li {
+  padding: 0 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.brand img {
+  width: 44px;
+}
+
+.container {
+  min-height: 60vh;
+  color: white;
+  font-family: "Gowun Batang", serif;
+  display: flex;
+  width: 90%;
+  margin: 13px auto;
+  border-radius: 12px;
+  padding: 7px;
+  background-image: url("sddefault.jpg");
+  background-size: cover; /* Make sure the image covers the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+}
+
+.bottom {
+  position: sticky;
+  height: 79px;
+  background-color: black;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#myProgressBar {
+  cursor: pointer;
+  margin-top: 4px;
+  width: 175vh;
+  text-align: center;
+}
+
+#size {
+  width: 38px;
+}
+
+#play {
+  margin-top: 5px;
+}
+
+.icons img {
+  width: 49px;
+  cursor: pointer;
+}
+
+.songItem {
+  display: flex;
+  background-color: white;
+  height: 50px;
+  width: 90%;
+  color: black;
+  margin: 12px 0;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 52px;
+  position: relative; /* Required for the absolute positioning of songInfo */
+}
+
+.songItem img {
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 52px;
+}
+
+.timestamp {
+  display: flex;
+  margin-right: 12px;
+}
+
+#clock {
+  margin-top: 23px;
+}
+
+#playb {
+  margin-top: -12px;
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+}
+
+.songItemContainer {
+  margin-top: 187px;
+}
+
+.heading {
+  margin-left: 173px;
+  text-align: center;
+  color: black;
+  font-family: "Playwrite DE Grund";
+
+  font-weight: bolder;
+}
+
+/* Song Information Hover Effect */
+.songInfo {
+  position: absolute;
+  left: 12vw;
+}
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.songItem:hover .songInfo {
+  display: block; /* Show on hover */
+}
+.songImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.songName,
+.movieName {
+  display: none; /* Hide song name and movie name by default */
+  font-size: 14px;
+  color: #333;
+}
+
+/* Hover effect to change image and show song/movie name */
+.songItem:hover .songImage {
+  content: url("i.jpg"); /* Change image to i.jpg on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.songItem:hover .songName,
+.songItem:hover .movieName {
+  display: block; /* Show song name and movie name on hover */
+}
+
+.buttons button {
+  background-color: #1db954; /* Spotify green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #1aa34a; /* Darker green on hover */
+}
