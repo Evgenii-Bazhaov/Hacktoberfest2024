@@ -164,7 +164,7 @@ A heartfelt thank you to the following individuals for their valuable contributi
   <img alt="contributors" src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024"/>
 </a>
 
-<br>
+
 
 <div align="center">
     <a href="#top">
