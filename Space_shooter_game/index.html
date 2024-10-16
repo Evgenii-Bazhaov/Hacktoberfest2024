@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Space Shooter</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: black;
+    }
+    canvas {
+      display: block;
+      background: linear-gradient(to bottom, #000, #222);
+    }
+    #score {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      color: white;
+    }
+    #highScore {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      color: yellow;
+    }
+    #gameOverScreen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-size: 30px;
+      display: none;
+    }
+    #gameOverScreen button {
+      background-color: #ff4747;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    #gameOverScreen button:hover {
+      background-color: #ff1f1f;
+    }
+  </style>
+</head>
+<body>
+  <div id="score">Score: 0</div>
+  <div id="highScore">High Score: 0</div>
+  <canvas id="gameCanvas"></canvas>
+  <div id="gameOverScreen">
+    <div id="gameOverText">Game Over!</div>
+    <div id="finalScore">Your Score: 0</div>
+    <div id="highScoreDisplay">High Score: 0</div>
+    <button id="playAgainBtn">Play Again</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
