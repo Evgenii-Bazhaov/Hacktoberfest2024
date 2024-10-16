@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>2048 Game</h1>
+        <div class="game-info">
+            <div class="score-container">
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            <button class="restart-button" onclick="restartGame()">Restart</button>
+        </div>
+        <div class="grid-container" id="grid-container">
+        </div>
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+              <h2>Game Over!</h2>
+              <p>Your score: <span id="final-score"></span></p>
+              <button id="restart-btn">Restart</button>
+            </div>
+        </div>          
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
