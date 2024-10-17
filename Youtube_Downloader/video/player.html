@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Player</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>YouTube Video Player</h1>
+    <iframe
+        id="ytplayer"
+        type="text/html"
+        width="640"
+        height="360"
+        src="{{ video_url }}"
+        frameborder="0"
+        allowfullscreen
+    ></iframe>
+
+    <br>
+
+    <!-- Player Options -->
+    <label for="cc">Captions:</label>
+    <select id="cc" onchange="changeCC(this.value)">
+        <option value="none">None</option>
+        <option value="en">English</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <label for="mute">Mute:</label>
+    <input type="checkbox" id="mute" onclick="toggleMute()">
+
+    <label for="speed">Speed:</label>
+    <select id="speed" onchange="changeSpeed(this.value)">
+        <option value="1.0">Normal</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <a id="download" href="{{ video_url }}" download>
+        <button>Download</button>
+    </a>
+
+    <script>
+        function changeCC(value) {
+            var player = document.getElementById('ytplayer');
+            player.src += '&cc_load_policy=1&cc_lang_pref=' + value;
+        }
+
+        function toggleMute() {
+            var player = document.getElementById('ytplayer');
+            player.mute = !player.mute;
+        }
+
+        function changeSpeed(value) {
+            var player = document.getElementById('ytplayer');
+            player.playbackRate = parseFloat(value);
+        }
+    </script>
+</body>
+</html>
