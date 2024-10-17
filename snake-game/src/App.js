@@ -11,6 +11,7 @@ const SnakeGame = () => {
   const [direction, setDirection] = useState(INITIAL_DIRECTION);
   const [food, setFood] = useState(INITIAL_FOOD);
   const [gameOver, setGameOver] = useState(false);
+  const [score, setScore] = useState(0);
 
   const moveSnake = useCallback(() => {
     if (gameOver) return;
@@ -42,6 +43,7 @@ const SnakeGame = () => {
         y: Math.floor(Math.random() * GRID_SIZE),
       };
       setFood(newFood);
+      setScore(prevScore => prevScore + 1); // Increment score
     } else {
       newSnake.pop();
     }
@@ -82,6 +84,10 @@ const SnakeGame = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <h1 className="text-3xl font-bold mb-4">Snake Game</h1>
+      <div className="flex items-center mb-4">
+        <span className="text-lg font-semibold">Score: </span>
+        <span className="text-lg font-bold text-green-600 ml-2">{score}</span>
+      </div>
       <div
         className="bg-white border-2 border-gray-300"
         style={{
