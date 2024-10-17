@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arvo", serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #111111;
+}
+
+.section {
+    padding: 2%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #fff;
+}
+
+.heading {
+    font-size: 48px;
+    color: #000;
+}
+
+#color-picker {
+    width: 35%;
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    background: none;
+    border-radius: 5px;
+}
