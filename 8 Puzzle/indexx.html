@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>8 Puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        border: rgb(255, 153, 0) solid 4px;
+      }
+      body {
+        background-color: lightblue;
+      }
+      header {
+        font-family: "Bangers", cursive;
+        font-weight: bolder;
+        text-decoration: underline;
+        color: #a949f7b6;
+        height: 10vh;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 15vh 15vh 15vh;
+        grid-template-rows: 15vh 15vh 15vh;
+        grid-gap: 0.3vw 0.3vw;
+        justify-content: center;
+        margin-bottom: 5vh;
+      }
+      .box {
+        background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+        color: #ff1d58;
+        text-align: center;
+        padding: 50px 0;
+        font-size: xx-large;
+        font-family: "Comic Neue", cursive;
+        border: #8b4afc 2px solid;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      .box:hover {
+        transform: scale(1.1);
+      }
+      body.dark-mode {
+        background-color: #121212;
+        color: white;
+      }
+      body.dark-mode .box {
+        background-image: linear-gradient(-20deg, #8ddad5 0%, #00cdac 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>8 Puzzle</h1>
+      <p id="moveCounter">Moves: 0</p>
+      <p id="timer">Time: 0s</p>
+    </header>
+
+    <div class="container">
+      <div class="box" id="x1" onclick="moveTile(0)"></div>
+      <div class="box" id="x2" onclick="moveTile(1)"></div>
+      <div class="box" id="x3" onclick="moveTile(2)"></div>
+      <div class="box" id="x4" onclick="moveTile(3)"></div>
+      <div class="box" id="x5" onclick="moveTile(4)"></div>
+      <div class="box" id="x6" onclick="moveTile(5)"></div>
+      <div class="box" id="x7" onclick="moveTile(6)"></div>
+      <div class="box" id="x8" onclick="moveTile(7)"></div>
+      <div class="box" id="x9" onclick="moveTile(8)"></div>
+    </div>
+
+    <button onclick="showHint()">Hint</button>
+    <button onclick="undo()">Undo</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button onclick="easyShuffle()">Easy</button>
+    <button onclick="mediumShuffle()">Medium</button>
+    <button onclick="hardShuffle()">Hard</button>
+
+    <ul id="leaderboard"></ul>
+
+    <script>
+      let puzzle = [1, 2, 3, 4, 5, 6, 7, 8, null];
+      let moves = 0;
+      let time = 0;
+      let timerInterval;
+      let previousPuzzles = [];
+      let leaderboard = [];
+
+      const boxElements = Array.from(document.getElementsByClassName("box"));
+
+      // Shuffle the puzzle array on load
+      function shuffle(array, shuffleCount = 50) {
+        let currentIndex = array.length,
+          randomIndex;
+        while (shuffleCount > 0) {
+          randomIndex = Math.floor(Math.random() * 9);
+          moveTile(randomIndex, false);
+          shuffleCount--;
+        }
+        return array;
+      }
+
+      function render() {
+        boxElements.forEach((box, index) => {
+          box.innerHTML = puzzle[index] ? puzzle[index] : "";
+        });
+      }
+
+      function moveTile(index, recordMove = true) {
+        const emptyIndex = puzzle.indexOf(null);
+        const validMoves = [index - 1, index + 1, index - 3, index + 3];
+
+        if (validMoves.includes(emptyIndex)) {
+          if (recordMove) previousPuzzles.push([...puzzle]); // Store previous state for undo
+          [puzzle[emptyIndex], puzzle[index]] = [puzzle[index], puzzle[emptyIndex]];
+          render();
+          if (recordMove) {
+            moves++;
+            document.getElementById("moveCounter").innerText = `Moves: ${moves}`;
+          }
+          checkWin();
+        }
+      }
+
+      function checkWin() {
+        const winCondition = [1, 2, 3, 4, 5, 6, 7, 8, null];
+        if (JSON.stringify(puzzle) === JSON.stringify(winCondition)) {
+          stopTimer();
+          leaderboard.push({ time, moves });
+          leaderboard.sort((a, b) => a.time - b.time);
+          displayLeaderboard();
+          setTimeout(() => alert(`Congrats! You Win! Time: ${time}s Moves: ${moves}`), 100);
+        }
+      }
+
+      function startTimer() {
+        timerInterval = setInterval(() => {
+          time++;
+          document.getElementById("timer").innerText = `Time: ${time}s`;
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timerInterval);
+      }
+
+      function showHint() {
+        const emptyIndex = puzzle.indexOf(null);
+        const validMoves = [emptyIndex - 1, emptyIndex + 1, emptyIndex - 3, emptyIndex + 3];
+
+        for (let i = 0; i < validMoves.length; i++) {
+          if (validMoves[i] >= 0 && validMoves[i] < 9) {
+            boxElements[validMoves[i]].style.backgroundColor = "yellow";
+          }
+        }
+
+        setTimeout(() => {
+          boxElements.forEach((box) => {
+            box.style.backgroundImage = "linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%)";
+          });
+        }, 1000);
+      }
+
+      function undo() {
+        if (previousPuzzles.length > 0) {
+          puzzle = previousPuzzles.pop();
+          render();
+        }
+      }
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+
+      function easyShuffle() {
+        puzzle = shuffle(puzzle.slice(), 10); // fewer shuffle moves
+        render();
+      }
+
+      function mediumShuffle() {
+        puzzle = shuffle(puzzle.slice(), 30); // moderate shuffle moves
+        render();
+      }
+
+      function hardShuffle() {
+        puzzle = shuffle(puzzle.slice(), 50); // more shuffle moves
+        render();
+      }
+
+      function displayLeaderboard() {
+        const leaderboardElement = document.getElementById("leaderboard");
+        leaderboardElement.innerHTML = leaderboard
+          .map((entry) => `<li>Time: ${entry.time}s, Moves: ${entry.moves}</li>`)
+          .join("");
+      }
+
+      document.addEventListener("keydown", (event) => {
+        const emptyIndex = puzzle.indexOf(null);
+
+        switch (event.key) {
+          case "ArrowUp":
+            moveTile(emptyIndex + 3);
+            break;
+          case "ArrowDown":
+            moveTile(emptyIndex - 3);
+            break;
+          case "ArrowLeft":
+            moveTile(emptyIndex + 1);
+            break;
+          case "ArrowRight":
+            moveTile(emptyIndex - 1);
+            break;
+        }
+      });
+
+      puzzle = shuffle(puzzle);
+      render();
+      startTimer();
+    </script>
+  </body>
+</html>
