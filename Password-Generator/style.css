@@ -1,0 +1,131 @@
+/* Existing styles from before */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Password display styling */
+.password-display {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    word-break: break-all;
+    min-height: 45px;
+}
+
+.password-display::selection {
+    background: #4caf50;
+    color: #fff;
+}
+
+/* Button styling */
+button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+button:active {
+    background: #388e3c;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Output field styling */
+.output {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+
+#copy {
+    margin-left: 10px;
+    background: #2196f3;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+#copy:hover {
+    background: #1976d2;
+}
+
+#copy:active {
+    background: #1565c0;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .password-display {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
