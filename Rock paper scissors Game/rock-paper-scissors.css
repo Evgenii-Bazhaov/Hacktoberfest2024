@@ -1,0 +1,78 @@
+body{
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+ }
+ .title-div{
+  display: flex;
+ }
+ .js-confirmation{
+  margin-left: 300px;
+ }
+
+ .title{
+   font-weight: bold;
+   font-size: 30px;
+ }
+ .move-icon{
+   height: 50px;
+ }
+ .move-button{
+   background-color: transparent;
+   border: 3px solid white;
+   width: 120px;
+   height: 120px;
+   border-radius: 60px;
+   margin-right: 10px;
+   cursor: pointer;
+  }
+  .move-button:hover{
+   box-shadow: inset 1px 1px 20px rgba(2, 230, 255, 0.8);
+
+ }
+
+ .result{
+   font-size: 25px;
+   font-weight: bold;
+   margin-top: 50px;
+ }
+
+ .score-button{
+   margin-top: 60px;
+   font-size: 16px;
+ }
+
+ .reset-button,
+ .auto-play,
+ .yes-button,
+ .no-button{
+   border: none;
+   background-color: white;
+   font-size: 15px;
+   padding: 8px 15px;
+   border-radius: 10px;
+   cursor: pointer;
+ }
+
+ .yes-button,
+ .no-button{
+  margin: 5px 10px;
+ }
+ 
+ .yes-button:hover,
+ .no-button:hover{
+  background-color: rgba(254, 254, 254, 0.1);
+  color: white;
+ }
+ 
+
+ .confirmationDiv{
+  display: flex;
+  background-color: rgb(34, 34, 34);
+  margin-top: 15px;
+  padding: 10px 10px;
+  box-shadow: inset 5px 5px 10px rgba(255, 0, 0, 0.2);
+  align-items: center;
+  width: 460px;
+
+ }
