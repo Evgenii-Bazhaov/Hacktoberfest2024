@@ -1,4 +1,4 @@
-let api_key = "b6528a72c58e9eb566ff0f1befd425fa";
+let api_key = "YOUR-API-KEY";
 
 let img_url = "https://image.tmdb.org/t/p/w500";
 let original_img_url = "https://image.tmdb.org/t/p/original";
