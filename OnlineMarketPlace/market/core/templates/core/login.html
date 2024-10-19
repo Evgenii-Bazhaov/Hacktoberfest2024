@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block content %}
+    <div class="w-1/2 my-6 p-6 mx-auto bg-gray-100 rounded-xl">
+        <h1 class="mb-6 text-3xl">Login</h1>
+
+        <form action="." method="post">
+            {% csrf_token %}
+
+    <!-- When you have a form instance (form) in your template context, {{ form.as_p }} is a shorthand way to render the form fields with their associated labels wrapped in <p> tags. -->
+
+            <div class="mb-3">
+                <label for="" class="inline-block mb-2">Username</label><br>
+                {{form.username}}
+            </div>
+        
+
+            <div class="mb-3">
+                <label for="" class="inline-block mb-2">Password</label><br>
+                {{form.password}}
+
+                {% if form.errors.password %}
+                <p class="text-red-500">{{ form.errors.password.0 }}</p>
+            {% endif %}
+
+            </div>
+            <!-- {% if form.errros or form.non_field_error %}
+                <div class="mb-3 p-6 bg-red-100 rounded-xl">
+                    {%for field in form %}
+                  
+                    <p class="text-red-500"> cecqec{{ form.errors }}</p>
+
+                    {% endfor %}
+                
+                    {{form.non_field_error}}
+
+                </div>
+            {% endif %} -->
+
+            <button class="py-4 px-8 text-lg bg-teal-500  hover:bg-teal-700 rounded-xl text-white" >Submit</button>
+
+
+
+
+        </form>
+    </div>
+{% endblock content %}
