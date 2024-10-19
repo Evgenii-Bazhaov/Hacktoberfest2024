@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Keyword Tracker for Research",
+  "description": "Tracks keywords across websites and notifies you when they are mentioned.",
+  "version": "1.0",
+  "permissions": [
+      "storage",
+      "activeTab"
+  ],
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+      }
+  ]
+}
