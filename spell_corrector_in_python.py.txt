@@ -1,0 +1,14 @@
+from spellchecker import SpellChecker
+
+def correct_spelling(text):
+    spell = SpellChecker()
+    words = text.split()
+    corrected_words = [spell.candidates(word) if spell.unknown([word]) else word for word in words]
+    corrected_text = " ".join(corrected_words)
+    return corrected_text
+
+# Example usage
+input_text = "I havv a speling errror."
+corrected = correct_spelling(input_text)
+print(f"Original: {input_text}")
+print(f"Corrected: {corrected}")
