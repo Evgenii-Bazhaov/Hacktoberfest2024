@@ -169,9 +169,8 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 
 A heartfelt thank you to the following individuals for their valuable contributions to this project. Your support and dedication are greatly appreciated:
 
-
 <a href="https://github.com/Evgenii-Bazhaov/Hacktoberfest2024/graphs/contributors">
-  <img alt="contributors" src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024"/>
+  <img src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024&max=500&columns=20&anon=1" />
 </a>
 
 
