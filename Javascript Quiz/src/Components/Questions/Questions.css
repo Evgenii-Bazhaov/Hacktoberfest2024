@@ -1,0 +1,11 @@
+.user_name {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+.question_container {
+  margin-top: 4%;
+  height: 60%;
+}

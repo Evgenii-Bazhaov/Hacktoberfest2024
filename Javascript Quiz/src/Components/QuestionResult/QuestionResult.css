@@ -1,0 +1,10 @@
+.option-result {
+    height: 8vh;
+    margin: 0.2% 1.5%;
+    border: 2px solid black;
+    width: 47%;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0.5%;
+    border-radius: 10px;
+  }
