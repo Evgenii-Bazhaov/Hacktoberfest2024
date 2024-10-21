@@ -1,0 +1,1 @@
+This project is an e-commerce website built using React. It serves as a learning resource for developers to understand React fundamentals, API calls, routing, dynamic routing, and other important React concepts.
