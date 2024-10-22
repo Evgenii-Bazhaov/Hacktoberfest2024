@@ -1,0 +1,9 @@
+.notes_svg {
+    object-fit: contain;
+    width: 9rem;
+}
+
+.count_icon {
+    object-fit: contain;
+    width: 2.5rem;
+}

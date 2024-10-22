@@ -1,0 +1,13 @@
+ <h1>Simple Quiz</h1>
+        <div class="quiz">
+            <h2 id="Question">Question goes here</h2>
+             <div id="answer-buttons">
+              <button class="btn O1">1</button>
+              <button class="btn O2">2</button>
+              <button class="btn O3">3</button>
+              <button class="btn O4">4</button>
+
+             </div>
+             <button id="next-button">Next</button>
+             </button>
+        </div>
