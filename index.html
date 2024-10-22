@@ -1,67 +1,86 @@
-<!DOCTYPE html>
-<html>
-    
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Include CSS file -->
-    <link rel="stylesheet" type="text/css" href="tictactoe.css">
-    <!-- Include JavaScript file -->
-    <script src="tictactoe.js"></script>
-</head>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<link rel="stylesheet" href="style.css"> 
+	<title>Feedback</title> 
+</head> 
 
-<body class="bg">
-    <div id="main">
-        <h1>TIC TAC TOE Game</h1>
-        <p id="ins">
-            Just Tap on box, Game starts !!!
-            <br><br>First Player starts is
-            <b>Player X </b>And Second Player is
-            <b>Player 0</b>
-        </p>
-        <br><br>
-        <div class = "ui">
-            <div class="row">
-                <input type="text" id= "b1" 
-                       class="cell" onclick="func_3(); func();" 
-                       readonly>
-                <input type="text" id= "b2" 
-                       class="cell" onclick="func_4(); func();" 
-                       readonly>
-                <input type="text" id= "b3" class="cell" 
-                       onclick="func_5(); func();" 
-                       readonly>
-            </div>
-            <div class="row">
-                <input type="text" id= "b4" 
-                       class="cell" onclick="func_6(); func();" 
-                       readonly>
-                <input type="text" id= "b5" 
-                       class="cell" onclick="func_7(); func();" 
-                       readonly>
-                <input type="text" id= "b6" 
-                       class="cell" onclick="func_8(); func();" 
-                       readonly>
-            </div>
-            <div class="row">
-                <input type="text" id= "b7" 
-                       class="cell" onclick="func_9(); func();" 
-                       readonly>
-                <input type="text" id= "b8" 
-                       class="cell" onclick="func_10();func();" 
-                       readonly>
-                <input type="text" id= "b9" 
-                       class="cell" onclick="func_11();func();" 
-                       readonly>
-            </div>
-        </div>
-        <br><br><br>
-      
-        <button id="btnClr" onclick="func_2()">
-            CLEAR
-        </button>
-        <br><br>
-        <p id="print"></p>
-    </div>
-</body>
+<body> 
+	<!-- Creating the form container -->
+	<div class="container"> 
+		<h1> Feedback </h1> 
+
+		<!-- Contains error -->
+		<h4 id="errorText"></h4> 
+		
+		<!-- Form element -->
+		<form id="feedbackForm">
+
+			<label for="name">
+				<b>	Name: </b>
+			</label><br>
+			<input type="text"
+				   id="name"
+				   name="name"
+				   required><br>
+			<br>
+
+			<label>
+				<b>		How Satisfied are you with our Product? </b>
+			</label><br>
+			<input type="radio"
+				   id="satisfied"
+				   name="type"
+				   value="Satisfied"
+				   required>
+
+			<label for="satisfied">
+				Satisfied
+			</label><br>
+			<input type="radio"
+				   id="notsatisfied"
+				   name="type"
+				   value="Unsatisfied"
+				   required>
+
+			<label for="notsatisfied">
+				Unsatisfied
+			</label><br>
+			<input type="radio"
+				   id="both"
+				   name="type"
+				   value="Both"
+				   required>
+
+			<label for="both">
+				Neutral
+			</label><br>
+
+
+			<br>
+
+
+			<label for="feedback">
+				<b>	Comments:  </b>
+			</label><br>
+			<input type="textarea"
+				   id="feedback"
+				   name="feedback"><br>
+
+
+
+			<button type="submit">
+				Submit
+			</button>
+		</form> 
+	</div> 
+
+	<!-- linking javascript file -->
+	<script src="script.js"></script> 
+</body> 
 
 </html>
