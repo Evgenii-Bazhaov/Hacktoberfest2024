@@ -1,18 +1,3 @@
-"""Connect Four
-
-Exercises
-
-1. Change the colors.
-2. Draw squares instead of circles for open spaces.
-3. Add logic to detect a full row.
-4. Create a random computer player.
-5. How would you detect a winner?
-"""
-
-from turtle import *
-
-from freegames import line
-
 turns = {'red': 'yellow', 'yellow': 'red'}
 state = {'player': 'yellow', 'rows': [0] * 8}
 
