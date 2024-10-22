@@ -1,0 +1,268 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.head{
+  box-sizing: border-box;
+  height: 100%;
+  width: 100vw;
+  font-size:2.5vw;
+  font-weight: 400;
+  /* background-image: url("./background.jpg"); */
+}
+.navbar{
+
+  height: 13vh;
+  padding: 0 20px;
+  background-color: hsla(220, 37%, 91%,0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 10px rgb(181, 179, 179);
+  text-shadow: 0 0 8px rgba(228, 33, 33, 0.8);
+  
+  .right{
+    display:flex;
+    justify-content: space-between;
+    gap: 1.5vw;
+    button{
+      box-shadow: 2px 2px 5px rgb(72, 72, 162),inset 5px 5px 10px rgb(167, 167, 176);
+    }
+  }
+  
+  button{
+    height: 5vh;
+    width: 8vw;
+    font-size: 2vmin;
+    border-radius: 10px;
+  }
+}
+
+button{
+  text-shadow: 3px 5px 8px rgba(161, 190, 93, 0.8);
+  cursor: pointer;
+}
+
+.load{
+  *{
+    margin: 2vh;
+  }
+
+  height: 75vh;
+  width: 100%;
+  background-color: rgb(196, 121, 64);
+  text-align: center;
+
+  button{
+    height: 6vh;
+    width: 15vw;
+    font-size: 1.4vw;
+    background-color: aqua;
+    border-radius: 10px;
+  }
+}
+
+.expla{
+  width: 100%;
+  font-size:4vh;
+}
+
+.content{
+  padding: 0;
+
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .search{
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    max-height: 10vh;
+    max-width: 100%;
+    /* background-color: aliceblue; */
+    /* width: 100%; */
+    form > input,button{
+    height: 7vh;
+    font-size: 2.3vw;
+    border-radius: 10px;
+
+    background-color: hsla(60, 46%, 88%,0.7);
+    box-shadow: 5px 5px 10px rgb(222, 222, 164);
+  
+    }
+    form input{
+      margin-right: 3vw;
+    }
+  }
+  /* gap:10vh; */
+
+  .data{
+
+    height: 73vh;
+    width: 100%;
+
+    display: flex;
+
+    .current{
+      height: 98%;
+      width: 30%;
+
+      .today{
+        box-sizing: border-box;
+        text-align: center;
+        font-size: large;
+        margin: 0 5%;
+        height: 100%;
+        width: 80%;
+        background-color: rgba(198, 201, 144,0.7);
+        border-radius: 20px;
+        overflow: scroll;
+        
+        .temp{
+          margin: 0%;
+          padding: 0%;
+          display: flex;
+          align-items: center;
+          font-size:3vw;
+          font-family:monospace;
+          /* background-color: beige; */
+
+          img{
+            margin: 0%;
+            padding: 0%;
+            /* background-color: red; */
+            width: 40%;
+            height: 10%;
+          }
+        }
+        .city{
+          margin: 0;
+          font-size: 2vw;
+        }
+        .wind{
+          height: 12vh;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-around;
+          font-size: 1.5vw;
+          margin: 0;
+          /* overflow: scroll; */
+
+          *{
+            margin: 0;
+            padding: 0;
+          }
+
+          .speed{
+            background-color: rgb(186, 216, 120);
+            border-radius: 20px;
+            width: 40%;
+            height: 100%;
+            overflow: scroll;
+
+            h4{
+              margin:8px 0;
+
+            }
+          }
+          
+        }
+        .climate{
+          font-size: 3vw;
+        }
+
+      }
+    }
+    
+    .week{
+      overflow: scroll;
+      font-size: large;
+      display: flex;
+      box-sizing: border-box;
+      width:70%;
+      height: 100%;
+      /* background-color: aliceblue; */
+      flex-wrap: wrap;
+      /* gap: 5vh; */
+      justify-content: space-around;
+      /* align-content: space-between; */
+      padding: 20px;
+
+      .day{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        height: 50%;
+        h4{
+          margin: 0px 15px;
+          padding: 0 10px;
+          background-color: rgb(221, 212, 224);
+          width: fit-content;
+
+          border-start-end-radius: 5px;
+          border-start-start-radius: 5px;
+
+        }
+        .boxes{
+          cursor: pointer;
+          display: flex;
+          border-radius: 20px;
+          /* flex-shrink: 0; */
+          height: 85%;
+          width: 92%;
+          background-color: rgb(207, 171, 128);
+          overflow: scroll;
+          gap: 20px;
+          padding:0 20px;
+          padding-right: 40px;
+
+          .box{
+            
+            text-align: center;
+            /* background-color: #61dafb; */
+            width: 13vw;
+            height: 100%;
+            border-radius: 10px;
+
+           *{
+            margin: 0;
+            padding: 0;
+           }
+           p{
+            margin: 10px 20px;
+            font-size: large;
+           }
+
+          }
+        }
+        
+      }
+      
+    }
+    .bar{
+      width: 80%;
+      height: 1%;
+      background-color: aliceblue;
+      margin: 5% 10% ;
+    }
+    .climate{
+      font-size: 7vh;
+      text-transform: capitalize;
+    }
+    
+  }
+
+}
