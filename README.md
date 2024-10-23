@@ -134,7 +134,7 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 # BONUS🔥
 ### * Hey 👋, Everyone You all are doing great, In my view you all are an open-source enthusiast, So Don't forget to checkout this open source  event  also. This is suggested by my friend.
 ### *  Please also upvote for my friend  in  event. You don't need a new account just aunthenticate by your github account and start you Journey.
-### * Checkout this & authenticate there to start contributing: ➡️ [DevFestAi](https://devfest.ai/nocode-leaderboard/cm1auef9p000870ebzxkjhl73?claim=true)
+### * Checkout this & authenticate there to start contributing: ➡️ [DevFestAi](https://devfest.ai/friend/cm121hwu50000w02bf3j6apfg)
 
 
 <li><B><p><img src="https://devfest.ai/svgs/Swag.svg" width="700" height="300" alt="t-shirt image"></a></p></p>
