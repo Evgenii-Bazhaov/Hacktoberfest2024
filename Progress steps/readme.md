@@ -1,0 +1,2 @@
+Progress Steps
+This project implements a dynamic progress steps component using HTML, CSS, and JavaScript. It features a visual progress bar with numbered steps that can be navigated using "Previous" and "Next" buttons.

@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.letter {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.present {
+  background-color: yellow;
+  color: white;
+}
+
+.absent {
+  background-color: gray;
+  color: white;
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
