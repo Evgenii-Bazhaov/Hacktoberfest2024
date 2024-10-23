@@ -132,9 +132,9 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 </b></li>
 
 # BONUS🔥
-### -  Hey 👋, Everyone You all are doing great, In my view you all are an open-source enthusiast, So Don't forget to checkout this open source  event  also. This is suggested by my friend.
-### -  Please also support my friend to win in  event. You don't need a new account just aunthenticate by your github account and start you Journey.
-### - Checkout this & authenticate there to start contributing: ➡️ [DevFestAi](https://devfest.ai/nocode-leaderboard/cm1auef9p000870ebzxkjhl73?claim=true)
+### * Hey 👋, Everyone You all are doing great, In my view you all are an open-source enthusiast, So Don't forget to checkout this open source  event  also. This is suggested by my friend.
+### *  Please also upvote for my friend  in  event. You don't need a new account just aunthenticate by your github account and start you Journey.
+### * Checkout this & authenticate there to start contributing: ➡️ [DevFestAi](https://devfest.ai/nocode-leaderboard/cm1auef9p000870ebzxkjhl73?claim=true)
 
 
 <li><B><p><img src="https://devfest.ai/svgs/Swag.svg" width="700" height="300" alt="t-shirt image"></a></p></p>
@@ -169,9 +169,8 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 
 A heartfelt thank you to the following individuals for their valuable contributions to this project. Your support and dedication are greatly appreciated:
 
-
 <a href="https://github.com/Evgenii-Bazhaov/Hacktoberfest2024/graphs/contributors">
-  <img alt="contributors" src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024"/>
+  <img src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024&max=500&columns=20&anon=1" />
 </a>
 
 

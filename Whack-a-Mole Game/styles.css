@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4e4376, #2b5876);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.hole {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mole {
+    width: 80px;
+    height: 80px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -80px;
+    left: 10px;
+    transition: bottom 0.3s ease-in-out;
+    background-image: url('https://cdn.prod.website-files.com/644f079d0dbcfa8372d7aa8a/64f0a4cfeba5a27ce82dd0d7_mole_8d3f7b17ef.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hole.active .mole {
+    bottom: 10px;
+}
+
+/* When the mole is whacked, we change its appearance */
+.mole.whacked {
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/source/skype/289/skull-and-crossbones_2620-fe0f.png');
+    background-size: 60px 60px;
+    background-position: center;
+    animation: squish 0.3s ease-out forwards;
+}
+
+@keyframes squish {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1, 0.7);
+    }
+    100% {
+        transform: scale(0.5, 1.2);
+    }
+}
+
+/* Buttons */
+.start-btn, .restart-btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.start-btn:hover, .restart-btn:hover {
+    background-color: #ff4500;
+}
+
+.start-btn:active, .restart-btn:active {
+    transform: scale(0.95);
+}
+
+#restart-btn {
+    display: none; /* Hidden by default */
+}
