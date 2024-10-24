@@ -1,0 +1,46 @@
+# Simple Contact Book
+
+contacts = {}
+
+def add_contact(name, phone):
+    contacts[name] = phone
+    print(f"Contact {name} added.")
+
+def view_contacts():
+    if contacts:
+        print("\nContacts:")
+        for name, phone in contacts.items():
+            print(f"Name: {name}, Phone: {phone}")
+    else:
+        print("\nNo contacts found.")
+
+def delete_contact(name):
+    if name in contacts:
+        del contacts[name]
+        print(f"Contact {name} deleted.")
+    else:
+        print(f"No contact found with name {name}.")
+
+while True:
+    print("\nContact Book Menu:")
+    print("1. Add Contact")
+    print("2. View Contacts")
+    print("3. Delete Contact")
+    print("4. Exit")
+    
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        name = input("Enter name: ")
+        phone = input("Enter phone number: ")
+        add_contact(name, phone)
+    elif choice == '2':
+        view_contacts()
+    elif choice == '3':
+        name = input("Enter the name of the contact to delete: ")
+        delete_contact(name)
+    elif choice == '4':
+        print("Exiting Contact Book.")
+        break
+    else:
+        print("Invalid choice. Please try again.")
