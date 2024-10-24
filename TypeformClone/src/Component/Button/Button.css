@@ -1,0 +1,25 @@
+.button {
+    cursor: pointer;
+    font-family: "Questrial", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+    word-spacing: 0px;
+    background-color: #268BFF;
+    color: white;
+    border-radius: 5%;
+    height: 2.5rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .button {
+        font-size: 15px;
+        line-height: 28px;
+        height: 2rem;
+        width: 4rem;
+    }
+}

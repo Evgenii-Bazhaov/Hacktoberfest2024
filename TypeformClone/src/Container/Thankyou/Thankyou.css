@@ -1,0 +1,20 @@
+.thankyou-div{
+    font-family: "Questrial", sans-serif;
+    height: 94%;
+    width: 99.8%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-left: -10%;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 900px) {
+.thankyou-div {
+        font-family: "Questrial", sans-serif;
+        height: 94%;
+        width: 90%;
+        margin-left: 10%;
+        font-size: 1.1rem;
+    }
+}

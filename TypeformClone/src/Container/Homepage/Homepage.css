@@ -1,0 +1,45 @@
+.homepage {
+    height: 95vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0% 25%;
+}
+
+.homepage-heading {
+    margin-top: -15%;
+}
+
+.homepage-subheading {
+    margin-top: 2%;
+}
+
+.homepage-btn {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Questrial", sans-serif;
+}
+
+@media (max-width: 900px) {
+    .homepage-heading {
+        margin-top: -15%;
+        margin-left: -20%;
+        width: 130%;
+    }
+
+    .homepage-subheading {
+        margin-top: 15%;
+        margin-left: -20%;
+        width: 140%;
+    }
+
+    .homepage-btn {
+        margin-top: 15%;
+    }
+
+}

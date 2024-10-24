@@ -1,0 +1,53 @@
+.option-div {
+    width: 52vw;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.option-value {
+    font-family: "Questrial", sans-serif;
+    font-size: 1.4rem;
+    border: 1px solid white;
+    width: 99%;
+    padding: 1%;
+    margin-top: 0.8%;
+    border-radius: 5px;
+}
+
+.option-value:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.option-value-selected {
+    background-color: white;
+    color: black;
+}
+
+.option-discarded {
+    background-color: rgb(129, 126, 126) !important;
+    color: rgb(179, 179, 179) !important;
+}
+
+.option-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .option-div {
+        width: 78vw;
+        margin-left: 1%;
+    }
+
+    .option-value {
+        font-size: 1rem;
+        padding: 2%;
+    }
+}
