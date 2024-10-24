@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEB3 APP</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" ></script>
+    <style>
+        body {
+            background-color: palevioletred;
+            font-size: 33px;
+            text-align: center;
+        }
+        button {
+            background-color: aquamarine;
+            font-size: 33px;
+            font-family: Impact;
+        }
+        button:hover {
+            background-color: slateblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="connectMetamask()">Connect Metamask</button>
+    <p id="accountArea"></p>
+    <button onclick="connectContract()">Connect Contract</button>
+    <p id="contractArea"></p>
+    <button onclick="readContract()">Read Contract</button>
+    <p id="readArea"></p>
+    <div style="display: flex; gap: 1rem;">
+        <button onclick="vote(0)">vote for 1</button>
+        <button onclick="vote(1)">vote for 2</button>
+        <button onclick="vote(2)">vote for 3</button>
+    </div>
+
+    <script>
+        //If I take accessToMetamask function part out, then the code will still work. 
+        //However I will not be able to call a write method. Because I would not have an 
+        //account to send gas.
+        let account;
+        const connectMetamask = async () => {
+            if(window.ethereum !== "undefined") {
+                const accounts = await ethereum.request({ method: "eth_requestAccounts"});
+                account = accounts[0];
+                document.getElementById("accountArea").innerHTML = account;
+            }
+        }
+
+        let contractApple;
+        const connectContract = async () => {
+            const Address = "0x38100BDbbde67DA92eaC946aD6c05f4F739301BC";
+            const ABI =  [
+                {
+                "inputs": [
+                    {
+                    "internalType": "string[]",
+                    "name": "initialCandidates",
+                    "type": "string[]"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+                },
+                {
+                "anonymous": false,
+                "inputs": [
+                    {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "candidateId",
+                    "type": "uint256"
+                    },
+                    {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "votes",
+                    "type": "uint256"
+                    }
+                ],
+                "name": "VoteCast",
+                "type": "event"
+                },
+                {
+                "inputs": [
+                    {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                    }
+                ],
+                "name": "candidates",
+                "outputs": [
+                    {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                    },
+                    {
+                    "internalType": "uint16",
+                    "name": "votes",
+                    "type": "uint16"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+                },
+                {
+                "inputs": [],
+                "name": "checkRunning",
+                "outputs": [
+                    {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+                },
+                {
+                "inputs": [
+                    {
+                    "internalType": "uint16",
+                    "name": "index",
+                    "type": "uint16"
+                    }
+                ],
+                "name": "getCandidate",
+                "outputs": [
+                    {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                    },
+                    {
+                    "internalType": "uint256",
+                    "name": "votes",
+                    "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+                },
+                {
+                "inputs": [
+                    {
+                    "internalType": "uint16",
+                    "name": "index",
+                    "type": "uint16"
+                    }
+                ],
+                "name": "vote",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+                }
+            ];
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner();
+            contractApple = new ethers.Contract(Address, ABI, signer);
+            console.log(contractApple)
+            document.getElementById("contractArea").innerHTML = contractApple.address;
+            listenForEvents()
+        }
+
+        const listenForEvents = ()=>{
+            contractApple.on("VoteCast", (...props)=>{console.log("event caught!");console.log(props)})
+        }
+
+        const readContract = async () => {
+            const myData = await contractApple.getCandidate(0);
+            console.log(myData)
+            document.getElementById("readArea").innerHTML = myData;
+        }
+
+        const vote = async (index)=>{
+            const res = await contractApple.vote(index);
+            console.log(res)
+        }
+
+
+    </script>
+</body>
+</html>
