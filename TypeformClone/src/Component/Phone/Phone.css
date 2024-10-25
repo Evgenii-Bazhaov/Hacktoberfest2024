@@ -1,0 +1,15 @@
+.phone-div {
+    width: 52vw;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+.phone-div {
+        width: 75vw;
+        margin-left: -1rem;
+    }
+}

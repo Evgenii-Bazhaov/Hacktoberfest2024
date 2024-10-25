@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    background-color: black;
+    color: white;
+    height: 99.99vh;
+}
+
+.heading {
+    font-family: 'Questrial', sans-serif;
+    font-size: 24px ;
+    line-height: 32px ;
+    color:rgb(255, 255, 255) ;
+    text-align: left ;
+    word-spacing: 0px ;
+    color: #FFFFFF;
+}
+
+.sub-heading{
+    font-family: 'Questrial', sans-serif ;
+    font-size: 20px ;
+    line-height: 28px ;
+    color: rgba(255, 255, 255, 0.7) ;
+    text-align: left ;
+    word-spacing: 0px;
+}

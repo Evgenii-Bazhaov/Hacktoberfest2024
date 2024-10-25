@@ -1,0 +1,14 @@
+.modal-fullScreen{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 99.99%;
+    position: absolute;
+    top: 0;
+    width: 99.99%;
+    margin: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    z-index: 99;
+}
