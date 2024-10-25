@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Counter Tool</title>
+ <style>
+   * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.results p {
+  flex: 1 1 45%;
+  font-size: 16px;
+  margin: 5px 0;
+  background: #f7f9fc;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  color: #34495e;
+}
+  
+ </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Word Counter Tool</h1>
+    
+    <textarea id="textInput" placeholder="Type or paste your text here..." rows="10"></textarea>
+    
+    <div class="results">
+      <p><strong>Word Count:</strong> <span id="wordCount">0</span></p>
+      <p><strong>Character Count:</strong> <span id="charCount">0</span></p>
+      <p><strong>Sentence Count:</strong> <span id="sentenceCount">0</span></p>
+      <p><strong>Paragraph Count:</strong> <span id="paragraphCount">0</span></p>
+    </div>
+  </div>
+
+  <script>
+
+
+    const textInput = document.getElementById('textInput');
+const wordCount = document.getElementById('wordCount');
+const charCount = document.getElementById('charCount');
+const sentenceCount = document.getElementById('sentenceCount');
+const paragraphCount = document.getElementById('paragraphCount');
+
+textInput.addEventListener('input', () => {
+  const text = textInput.value.trim();
+
+  // Word count: split by spaces, ignore empty entries
+  const words = text.match(/\b\w+\b/g) || [];
+  wordCount.innerText = words.length;
+
+  // Character count: count non-space characters
+  const characters = text.replace(/\s/g, '');
+  charCount.innerText = characters.length;
+
+  // Sentence count: match common sentence endings (period, question mark, exclamation)
+  const sentences = text.match(/[\w|\)][.?!](\s|$)/g) || [];
+  sentenceCount.innerText = sentences.length;
+
+  // Paragraph count: split by double line breaks
+  const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+  paragraphCount.innerText = paragraphs.length;
+});
+
+    
+  </script>
+</body>
+</html>
