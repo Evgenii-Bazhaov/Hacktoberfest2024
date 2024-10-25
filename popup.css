@@ -1,0 +1,74 @@
+/* Giving style to the body elements in HTML code */
+body {
+
+    width: 300px;        /* setting width of UI Window */
+    background-color: #2A2F33; /* setting background colour of UI window */
+    font-family: Arial, sans-serif;  /*setting the font style to UI window text */
+    text-align: left;           /*setting alignment to text */
+    padding: 20px;              /*setting the padding to the text with the box */
+  }
+
+  /* stle the Heading
+  text-font size,font-boldness,alignment,color,padding etc */
+  h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    color: #F5F7F8;
+    background-color: #4F4A45;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Button style 
+  background color,text color,border-radius,padding,cursor,etc*/
+  button {
+    background-color: #BCA37F; /* Blue button background */
+    color: #F5F7F8; /* White button text */
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    margin: 5px;
+    display: flex;
+  }
+  
+  /* stying the content when we hover over buttons */
+  button:hover {
+    background-color: #BFB29E;
+    font-weight: 600;
+  }
+
+  /* styling the question box in which question link is displayed */
+  .question-box {
+    background-color: #f2f2f2;
+    border: 2px solid ;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  /* styling the content of question-box when hover over it */
+  .question-box:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+    font-size: 14px;
+
+  }
+  
+  /*styling the link under question box */
+  .question-box a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* stling the independent class hidden*/
+  .hidden {
+    display: none;
+  }
+  
