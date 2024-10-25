@@ -1,0 +1,19 @@
+.landing_svg {
+  width: 80%;
+  height: 80%;
+}
+
+.line_1, .line_3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.line_2 {
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8rem;
+    color: red;
+}
