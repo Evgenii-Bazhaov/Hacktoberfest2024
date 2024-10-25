@@ -1,0 +1,21 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "hardhat": "^2.22.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "scripts": {
+    "deploy": "hardhat ignition deploy ./ignition/modules/Test.ts --network localganache",
+    "compile": "hardhat compile",
+    "dev": "ts-node-dev frontend/server.ts"
+  }
+}

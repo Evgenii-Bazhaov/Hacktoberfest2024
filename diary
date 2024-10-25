@@ -1,0 +1,38 @@
+import datetime
+
+def write_entry():
+    date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    entry = input("Write your diary entry: ")
+    with open("diary.txt", "a") as file:
+        file.write(f"{date}\n{entry}\n\n")
+    print("Entry saved!")
+
+def read_entries():
+    try:
+        with open("diary.txt", "r") as file:
+            entries = file.read()
+            if entries:
+                print("\nDiary Entries:\n")
+                print(entries)
+            else:
+                print("No entries found.")
+    except FileNotFoundError:
+        print("No entries found.")
+
+while True:
+    print("\nDiary Menu:")
+    print("1. Write a new entry")
+    print("2. Read all entries")
+    print("3. Exit")
+    
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        write_entry()
+    elif choice == '2':
+        read_entries()
+    elif choice == '3':
+        print("Exiting Diary.")
+        break
+    else:
+        print("Invalid choice. Please try again.")
