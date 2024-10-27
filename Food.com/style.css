@@ -1,0 +1,539 @@
+* {
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .outer-cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: all 220ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 2500000000;
+  }
+  
+  .inner-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+    z-index: 2500000000000;
+  }
+  
+  .hover {
+    opacity: 0;
+  }
+  
+  .cursorinnerhover {
+    width: 50px;
+    height: 50px;
+    opacity: 0.9;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffee00;
+    border-radius: 20px;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000;
+    transition: 0.5s ease;
+  }
+  
+  nav.sticky {
+    padding: 15px 100px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .logo {
+    text-decoration: none;
+    color: #ffd000;
+    font-size: 2em;
+    font-weight: 700;
+    transition: 0.5s ease;
+  }
+  
+  .navbar .logo span {
+    color: #fff;
+  }
+  
+  nav.sticky .logo span {
+    color: #111;
+  }
+  
+  .navbar .navlinks {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar .navlinks li a {
+    padding: 0px 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+    font-size: 1.1rem;
+  }
+  
+  nav.sticky .navlinks li a {
+    color: #111;
+  }
+  
+  .navbar .navlinks li a:hover {
+    color: #ffd000;
+  }
+  
+  .banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.69)),
+      url(assets/bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .banner .content {
+    text-align: center;
+    width: 60%;
+    color: #fff;
+  }
+  
+  .banner .content .heading {
+    font-size: 5em;
+    text-transform: capitalize;
+    padding: 0 0 0.6rem 0;
+  }
+  
+  .banner .content .paragraph {
+    padding: 0 0 2.2rem 0;
+  }
+  
+  .btn {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 25px;
+    background: #ffd000;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+  }
+  
+  .btn:hover {
+    background: transparent;
+    color: #ffd000;
+    border: 1px solid #ffd000;
+    letter-spacing: 7px;
+  }
+  
+  section {
+    padding: 70px;
+  }
+  
+  .row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .row .col50 {
+    width: 48%;
+    color: #111;
+  }
+  #sp{
+    float: left;
+  }
+  .titleText {
+    font-size: 2em;
+    font-weight: 300;
+    padding: 0 0 0.7rem 0;
+  }
+  
+  .titleText span {
+    color: #ffd000;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  
+  .row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .row .col50 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .menu .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+  }
+  
+  .menu .content .box {
+    width: 340px;
+    margin: 20px;
+    border: 15px solid white;
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    border-radius: 10px;
+  }
+  
+  .menu .content .box:hover {
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+  }
+  
+  .menu .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+  }
+  
+  .menu .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .menu .content .box .text {
+    padding: 15px 0 15px 15px;
+  }
+  
+  .menu .content .box .text h3 {
+    font-weight: 400;
+  }
+  
+  .sp{
+    text-align: center;
+  }
+
+  .cs .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper {
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card .img {
+    background: #ffd000;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+
+  .contact {
+    background: url(https://d39l2hkdp2esp1.cloudfront.net/img/photo/140991/140991_00_2x.jpg?20180302040152);
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .contactForm {
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+    border-radius: 10px;
+    max-width: 500px;
+    margin-top: 50px;
+  }
+  
+  .contactForm h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea {
+    width: 100%;
+    border: 1.5px solid #ffd000;
+    border-radius: 5px;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+  }
+  
+  .contactForm .inputBox input[type="button"] {
+    color: #000;
+    font-weight: 600;
+    padding: 12px 25px;
+    background: #ffd000;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contactForm .inputBox input[type="button"]:hover {
+    background: transparent;
+    letter-spacing: .5rem;
+    border: 1px solid #ffd000;
+    color:#ffd000;
+  }
+  
+  
+  @media screen and (max-width: 991px) {
+    .navbar,
+    .navbar.sticky {
+      padding: 10px 20px;
+    }
+  
+    .navbar .navlinks {
+      display: none;
+    }
+  
+    .navbar .navlinks li a{
+      color: #111;
+      font-size: 1.8em;
+    }
+  
+    .navbar .navlinks.active{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0; 
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #fff
+    }
+  
+    .menuToggle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      transition: 0.5s ease-in-out;
+      background: url(assets/image-removebg-preview.png);
+      background-size: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  
+    .menuToggle.active {
+      background: url(assets/close.png);
+      background-size: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 10000000;
+    }
+  
+    section{
+      padding: 20px;
+    }
+  
+    .banner .content .heading {
+      font-size: 3em;
+    }
+  
+    .row{
+      flex-direction: column;
+    }
+  
+    .row .col50{
+      width: 100%;
+    }
+  
+    .row .col50 .imgBx{
+      min-height: 300px;
+      height: 300px;
+      margin-top: 20px;
+    }
+  
+    .menu .content{
+      margin-top: 20px;
+    }
+  
+    .menu .content .box{
+      margin: 10px;
+    }
+  
+    .menu .content .box .imgBx{
+      height: 260px;
+    }
+  
+    .contactForm{
+      padding: 35px 40px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 441px){
+    .banner .content{
+      width: 100%;
+    }
+    .banner .content .heading {
+      font-size: 2.2em;
+    }
+  }
