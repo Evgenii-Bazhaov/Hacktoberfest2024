@@ -1,0 +1,83 @@
+import pygame
+import random
+
+# Initialize Pygame
+pygame.init()
+
+# Screen dimensions
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
+# Paddle settings
+PADDLE_WIDTH = 10
+PADDLE_HEIGHT = 100
+PADDLE_SPEED = 7
+
+# Ball settings
+BALL_SIZE = 10
+BALL_SPEED_X = 4
+BALL_SPEED_Y = 4
+
+# Set up the screen
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("Pong")
+
+# Paddle positions
+paddle1_y = (SCREEN_HEIGHT - PADDLE_HEIGHT) // 2
+paddle2_y = (SCREEN_HEIGHT - PADDLE_HEIGHT) // 2
+
+# Ball position and speed
+ball_x = SCREEN_WIDTH // 2
+ball_y = SCREEN_HEIGHT // 2
+ball_speed_x = BALL_SPEED_X * random.choice([-1, 1])
+ball_speed_y = BALL_SPEED_Y * random.choice([-1, 1])
+
+# Game loop
+running = True
+clock = pygame.time.Clock()
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_w] and paddle1_y > 0:
+        paddle1_y -= PADDLE_SPEED
+    if keys[pygame.K_s] and paddle1_y < SCREEN_HEIGHT - PADDLE_HEIGHT:
+        paddle1_y += PADDLE_SPEED
+    if keys[pygame.K_UP] and paddle2_y > 0:
+        paddle2_y -= PADDLE_SPEED
+    if keys[pygame.K_DOWN] and paddle2_y < SCREEN_HEIGHT - PADDLE_HEIGHT:
+        paddle2_y += PADDLE_SPEED
+
+    ball_x += ball_speed_x
+    ball_y += ball_speed_y
+
+    if ball_y <= 0 or ball_y >= SCREEN_HEIGHT - BALL_SIZE:
+        ball_speed_y *= -1
+
+    if ball_x <= 0:
+        ball_x, ball_y = SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2
+        ball_speed_x *= random.choice([-1, 1])
+    elif ball_x >= SCREEN_WIDTH - BALL_SIZE:
+        ball_x, ball_y = SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2
+        ball_speed_x *= random.choice([-1, 1])
+
+    if (ball_x <= PADDLE_WIDTH and paddle1_y < ball_y < paddle1_y + PADDLE_HEIGHT) or \
+       (ball_x >= SCREEN_WIDTH - PADDLE_WIDTH - BALL_SIZE and paddle2_y < ball_y < paddle2_y + PADDLE_HEIGHT):
+        ball_speed_x *= -1
+
+    screen.fill(BLACK)
+    pygame.draw.rect(screen, WHITE, (0, paddle1_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+    pygame.draw.rect(screen, WHITE, (SCREEN_WIDTH - PADDLE_WIDTH, paddle2_y, PADDLE_WIDTH, PADDLE_HEIGHT))
+    pygame.draw.ellipse(screen, WHITE, (ball_x, ball_y, BALL_SIZE, BALL_SIZE))
+
+    pygame.display.flip()
+    clock.tick(60)
+
+pygame.quit()

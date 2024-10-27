@@ -1,0 +1,90 @@
+.svg-ques {
+    width: 0.7em;
+    height: 0.7em;
+}
+
+.svg-ques path,
+.svg-ques polygon,
+.svg-ques rect {
+    fill: #fafafa;
+}
+
+.svg-ques circle {
+    stroke: #ffffff;
+    stroke-width: 1;
+}
+
+.ques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    margin-top: 13%;
+}
+
+.ques-title {
+    font-size: 1.8rem;
+    font-family: "Questrial", sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 52%;
+}
+
+.ans {
+    margin-top: 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.ques-sub-title {
+    font-size: 1.3rem;
+    font-family: "Questrial", sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 52%;
+    margin-top: 1%;
+    margin-left: 8%;
+    color: rgb(175, 175, 175);
+}
+
+.ques-btn {
+    margin-left: -2%;
+}
+
+.error-div {
+    font-size: 1.3rem;
+    font-family: "Questrial", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    color: black;
+    padding-left: 5px;
+}
+
+@media (max-width: 900px) {
+    .ques-title {
+        font-size: 1.3rem;
+        width: 80%;
+        margin-top: 50%;
+        align-items: flex-start;
+    }
+
+    .ques-sub-title {
+        font-size: 1rem;
+        width: 80%;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+
+    .error-div {
+        font-size: 0.8rem;
+        padding-left: 5px;
+        margin-top: 5%;
+    }
+}

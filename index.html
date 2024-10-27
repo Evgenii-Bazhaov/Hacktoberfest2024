@@ -1,86 +1,28 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport"
-		content="width=device-width, 
-				initial-scale=1.0"> 
-	<link rel="stylesheet" href="style.css"> 
-	<title>Feedback</title> 
-</head> 
+<!DOCTYPE html>
+<html lang="en">
 
-<body> 
-	<!-- Creating the form container -->
-	<div class="container"> 
-		<h1> Feedback </h1> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-		<!-- Contains error -->
-		<h4 id="errorText"></h4> 
-		
-		<!-- Form element -->
-		<form id="feedbackForm">
+<body>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <div class="input-form">
+            <input type="text" id="website" placeholder="Website" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="addPassword()">Add Password</button>
+        </div>
+        <div class="password-list">
+            <h2>Saved Passwords</h2>
+            <ul id="passwordList"></ul>
+        </div>
+    </div>
 
-			<label for="name">
-				<b>	Name: </b>
-			</label><br>
-			<input type="text"
-				   id="name"
-				   name="name"
-				   required><br>
-			<br>
-
-			<label>
-				<b>		How Satisfied are you with our Product? </b>
-			</label><br>
-			<input type="radio"
-				   id="satisfied"
-				   name="type"
-				   value="Satisfied"
-				   required>
-
-			<label for="satisfied">
-				Satisfied
-			</label><br>
-			<input type="radio"
-				   id="notsatisfied"
-				   name="type"
-				   value="Unsatisfied"
-				   required>
-
-			<label for="notsatisfied">
-				Unsatisfied
-			</label><br>
-			<input type="radio"
-				   id="both"
-				   name="type"
-				   value="Both"
-				   required>
-
-			<label for="both">
-				Neutral
-			</label><br>
-
-
-			<br>
-
-
-			<label for="feedback">
-				<b>	Comments:  </b>
-			</label><br>
-			<input type="textarea"
-				   id="feedback"
-				   name="feedback"><br>
-
-
-
-			<button type="submit">
-				Submit
-			</button>
-		</form> 
-	</div> 
-
-	<!-- linking javascript file -->
-	<script src="script.js"></script> 
-</body> 
+    <script src="script.js"></script>
+</body>
 
 </html>
