@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-To-Text Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: #b6ebf0;
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #result {
+            height: 50px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            width: 300px;
+        }
+        button {
+            font-size: 24px;
+            border-radius: 10px;
+            border: 1.5px solid rgb(0, 0, 103);
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        input[type="submit"], input[type="button"] {
+            background-color: #7ca9f2;
+            border: 2px solid black;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="result" placeholder="Speech Input" required />
+        <br>
+        <button onclick="startConverting();"><i class="fa fa-microphone"></i></button>
+        <button onclick="stopConverting();"><i class="fa fa-remove"></i></button>
+        <br>
+        <br>
+        <input type="button" value="Clear" onclick="clearText()" />
+    </div>
+
+    <script>
+        var r = document.getElementById('result');
+        var speechRecognizer = new webkitSpeechRecognition();
+
+        function startConverting() {
+            if ('webkitSpeechRecognition' in window) {
+                speechRecognizer.continuous = true;
+                speechRecognizer.interimResults = true;
+                speechRecognizer.start();
+                var finalTranscripts = '';
+                
+                speechRecognizer.onresult = function(event) {
+                    var interimTranscripts = '';
+                    var transcript = '';
+                    for (var i = event.resultIndex; i < event.results.length; i++) {
+                        transcript = event.results[i][0].transcript;
+                        if (event.results[i].isFinal) {
+                            finalTranscripts += transcript + ' ';
+                        } else {
+                            interimTranscripts += transcript;
+                        }
+                    }
+                    r.value = finalTranscripts + interimTranscripts;
+                };
+
+                speechRecognizer.onerror = function(event) {
+                    console.error(event.error);
+                };
+            } else {
+                r.value = 'No browser support. Please upgrade your browser.';
+            }
+        }
+
+        function stopConverting() {
+            speechRecognizer.stop();
+        }
+
+        function clearText() {
+            r.value = "";
+            stopConverting();
+        }
+    </script>
+</body>
+</html>
