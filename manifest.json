@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,   
+    "name": "Leetcode Practice Helper",
+    "version": "1.0",
+    "description": "A Chrome extension for practicing and saving code questions.",
+    "permissions": ["activeTab", "storage","file:///*"],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  }
+  

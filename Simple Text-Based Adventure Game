@@ -1,0 +1,79 @@
+# Simple Text-Based Adventure Game
+
+def show_instructions():
+    print("""
+    Text Adventure Game
+    ====================
+    Commands:
+      go [direction]
+      get [item]
+    """)
+
+def show_status():
+    print("---------------------------")
+    print(f"You are in the {current_room}")
+    print(f"Inventory: {inventory}")
+    if "item" in rooms[current_room]:
+        print(f"You see a {rooms[current_room]['item']}")
+    print("---------------------------")
+
+# A dictionary linking rooms to other rooms and items
+rooms = {
+    'Hall': {
+        'south': 'Kitchen',
+        'east': 'Dining Room',
+        'item': 'key'
+    },
+    'Kitchen': {
+        'north': 'Hall',
+        'item': 'monster'
+    },
+    'Dining Room': {
+        'west': 'Hall',
+        'south': 'Garden',
+        'item': 'potion'
+    },
+    'Garden': {
+        'north': 'Dining Room',
+        'item': 'treasure'
+    }
+}
+
+# Starting conditions
+inventory = []
+current_room = 'Hall'
+
+show_instructions()
+
+# Game loop
+while True:
+    show_status()
+    
+    # Get the player's next move
+    move = input("> ").lower().split()
+    
+    if move[0] == "go":
+        # Check if the move is allowed
+        if move[1] in rooms[current_room]:
+            current_room = rooms[current_room][move[1]]
+        else:
+            print("You can't go that way!")
+    
+    elif move[0] == "get":
+        # Check if the item is in the current room
+        if "item" in rooms[current_room] and move[1] == rooms[current_room]['item']:
+            inventory.append(move[1])
+            print(f"{move[1]} obtained!")
+            del rooms[current_room]['item']
+        else:
+            print(f"Can't get {move[1]}!")
+    
+    # Lose condition if you meet the monster
+    if "item" in rooms[current_room] and rooms[current_room]['item'] == 'monster':
+        print("A monster has got you... GAME OVER!")
+        break
+    
+    # Win condition if you find the treasure
+    if "treasure" in inventory:
+        print("You found the treasure! YOU WIN!")
+        break

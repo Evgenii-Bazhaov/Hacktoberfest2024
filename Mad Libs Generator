@@ -1,0 +1,18 @@
+# Mad Libs Generator
+
+def get_input(prompt):
+    return input(prompt)
+
+def create_story(noun, verb, adjective, adverb):
+    return f"Once upon a time, there was a {adjective} {noun} who loved to {verb} {adverb}."
+
+# Collecting words from the user
+noun = get_input("Enter a noun: ")
+verb = get_input("Enter a verb: ")
+adjective = get_input("Enter an adjective: ")
+adverb = get_input("Enter an adverb: ")
+
+# Generating the story
+story = create_story(noun, verb, adjective, adverb)
+print("\nYour Mad Libs story:")
+print(story)

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Password Strength Validator</title>
+	<script type="text/javascript">
+		function checkStrength(password) {
+			var strength = 0;
+			if (password.length < 8) {
+				document.getElementById("password_strength").innerHTML = "Password is too short";
+				return;
+			}
+			if (password.length >= 8) {
+				strength += 1;
+			}
+			if (password.match(/[a-z]/)) {
+				strength += 1;
+			}
+			if (password.match(/[A-Z]/)) {
+				strength += 1;
+			}
+			if (password.match(/[0-9]/)) {
+				strength += 1;
+			}
+			if (password.match(/[$@#&!]/)) {
+				strength += 1;
+			}
+			if (strength < 2) {
+				document.getElementById("password_strength").innerHTML = "Weak Password";
+			} else if (strength == 2) {
+				document.getElementById("password_strength").innerHTML = "Moderate Password";
+			} else {
+				document.getElementById("password_strength").innerHTML = "Strong Password";
+			}
+		}
+	</script>
+	<style type="text/css">
+		body {
+			font-family: Cambria, Cambria;
+			font-size: 25px;
+			margin: 0;
+			padding: 0;
+			background-image: url('img.jpg');
+                  background-repeat: no-repeat;
+  			background-size: cover;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: rgba(255, 255, 255, 0.7);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+		}
+		h1 {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		input[type="password"] {
+			font-size: 20px;
+			padding: 35px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+			width: 300px;
+			text-align: center;
+		}
+		button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 	10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 25px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		#password_strength {
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Cyber Savants</h1>
+            <h1>Password Strength Validator</h1>
+		<input type="password" placeholder="Enter Password" id="password_input" onkeyup="checkStrength(this.value)">
+		<button onclick="checkStrength(document.getElementById('password_input').value)">Check Strength</button>
+		<div id="password_strength"></div>
+	</div>
+</body>
+</html>
