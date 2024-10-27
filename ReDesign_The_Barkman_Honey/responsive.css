@@ -1,0 +1,1578 @@
+@media only screen and (max-width: 475px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .section {
+        width: 200vw;
+        padding: 10vw 17vw;
+        /* min-height: 100vh; */
+    }
+
+    /* extended navbar  */
+    .close {
+        position: absolute;
+        z-index: 51;
+        top: 6%;
+        right: 6%;
+        cursor: pointer;
+        padding: 2vw;
+        border-radius: 50%;
+    }
+    .close img{
+        width: 14vw;
+        height: 14vw;
+    }
+    .extented_nav {
+        width: 200vw;
+        height: 200vh;
+        padding: 20vw 7vw;
+        flex-direction: column;
+    }
+    .extented_nav_part1 {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .extented_nav_part1 .e_logo {
+        width: 25vw;
+        margin-left: -150vw;
+        
+    }
+    
+    .extented_nav_part1 video {
+        width: 150vw;
+        height: 100vw;
+        margin-top: 30vw;
+        object-fit: cover;
+        background-color: aquamarine;
+    }
+    .extented_nav_part1 .video_details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150vw;
+        font-size: 4vw;
+        margin-top: 5vw;
+        
+    }
+
+    .extented_nav_part2 {
+        width: 50%;
+        height: 60%;
+        padding: 0 2vw;
+        margin-top: 10vw;
+        align-items: center;
+    }
+
+    .e_menu {
+        padding: 0 0.5vw;
+        height: 22vw;
+    }
+
+    .e_menu h1 {
+        font-size: 18vw;
+    }
+
+    .heading_title {
+        font-size: 15vw;
+        /* margin-bottom: 10vw; */
+    }
+
+    .hero_section {
+        width: 200vw;
+        min-height: 200vh;
+    }
+
+    .navbar {
+        height: fit-content;
+        /* background-color: red; */
+        /* margin-top: 5%; */
+    }
+
+    .nav_logo>img {
+        height: fit-content;
+        width: 40vw;
+    }
+
+    .nav_menu>img {
+        height: 15vw;
+        width: 15vw;
+    }
+
+    .container {
+        height: 180vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: green; */
+    }
+
+    .hero_heading {
+        align-items: center;
+        width: 80%;
+        /* margin-top: 10%; */
+    }
+
+    .hero_heading h1 {
+        font-size: 32vw;
+        line-height: 32vw;
+        text-align: center;
+    }
+
+    .hero_heading p {
+        font-size: 2.2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 1vw;
+    }
+
+    .right_container .bee_img {
+        position: absolute;
+        top: -8%;
+        left: 15%;
+    }
+
+    .bee_img>img {
+        height: 50vw;
+        width: 50vw;
+    }
+
+    .right_container .hero_img>img {
+        /* position: absolute; */
+        width: 172vw;
+        height: 170vw;
+        margin-top: -2%;
+    }
+    #beePathSvg{
+        /* background-color: rebeccapurple; */
+        position: absolute;
+        top: -40%;
+        left: -35%;
+        width: 100vw;
+        rotate: 0deg;
+        z-index: 10;
+        
+    }
+
+    /* *********PRODUCT SECTION******** */
+
+    .product_section .title_container {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .product_title_container {
+        height: 60%;
+        width: 100%;
+        bottom: -40%;
+    }
+
+    .product_add_cart_icon {
+        width: 12vw;
+        height: 12vw;
+        font-size: 7vw;
+    }
+
+    .product_title_container {
+        padding: 8vw 4vw;
+    }
+
+    .product_title {
+        font-size: 5vw;
+        font-weight: 500;
+        padding-top: 2vw;
+    }
+
+    .product_desc {
+        font-size: 4vw;
+        line-height: 4vw;
+        font-weight: 100;
+    }
+
+    .product_price {
+        font-size: 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+/* *********PRODUCT TRACK SECTION******** */
+
+.small_section {
+    padding: 1vw 7vw;
+    background-color: #F6BE00;
+    width: 200vw;
+    height: 40vh;
+    margin: 10vh 0;
+}
+.btn {
+    font-size: 4vw;
+    padding: 5vw 7vw;
+    cursor: pointer;
+    margin-top: 4vw;
+}
+
+.product_track_title {
+    font-size: 10vw;
+    line-height: 10vw;
+    width: 100%;
+}
+
+.product_track_overlay {
+    position: absolute;
+    width: 25vw;
+    left: 65%;
+    top: 45%;
+}
+.product_popup_section_input input{ 
+    padding: 2vw 2.6vw;
+    font-size: 4vw;
+
+}
+.honey_trace_search_btn{
+    font-size: 4vw;
+    margin-left:-1.5vw;
+    padding: 2vw 2.6vw;
+}
+
+/* *********ABOUT HONEY SECTION******** */
+.about_honey_section {
+    width: 200vw;
+    padding: 0;
+    flex-direction: column;
+    margin-top: 70vw;
+}
+
+.about_honey_section_left {
+    width: 100%;
+    position: sticky;
+}
+
+.about_honey_img_container {
+    height: 40vh;
+    width: 120vw;
+    background-color: #5A4522;
+}
+.about_honey_section_right {
+    width: 100%;
+    background-color: white;
+    padding: 2vw 7vw;
+}
+
+.about_honey_historyBox {
+    width: 70%;
+    height: 25vh;
+    margin: 4vw 0;
+}
+.about_honey_historyBox_desc {
+    padding: 4vw;
+}
+
+/* *********HONEY NEUTRATION SECTION******** */
+
+
+/* *********BEE SECTION******** */
+
+.bee_section {
+    width: 200vw;
+    height: 100vh;
+    position: relative;
+}
+
+.bee_section_img_cover {
+    width: 100%;
+    height: 200vh;
+    background-color: #ffffff;
+    position: absolute;
+}
+.bee_section_title {
+    width: 300px;
+    font-size: 6vw;
+}
+.bee_section_desc {
+    width: 70vw;
+    font-size: 5.5vw;
+    font-weight: 500;
+}
+
+/* *********ABOUT US SECTION******** */
+.about_section {
+    width: 200vw;
+}
+
+.about_section_container {
+    height: 400vh;
+}
+.about_section_slides {
+    width: 100%;
+    height: 200vh;
+}
+
+.slide {
+    width: 100%;
+    height: 200vh;
+}
+
+.slide_overlay_heading {
+    font-size: 40vw;
+}
+
+.slide_text_group {
+    position: absolute;
+    width: 25rem;
+}
+
+.slide_text_group_num {
+    width: 4rem;
+    height: 4rem;
+}
+
+.slide_rext_group_text {
+    font-size: 2rem;
+    padding: 4.5vw 2vw;
+}
+.slide1_text_group1 {
+    top: 20%;
+    left: 5%;
+}
+
+.slide2_text_group1 {
+    top: 20%;
+    left: 3%;
+}
+
+.slide2_text_group2 {
+    top: 5%;
+    right: 10%;
+}
+
+.slide2_text_group3 {
+    bottom: 10%;
+    left: 5%;
+}
+
+.slide2_text_group4 {
+    left: 55%;
+    top: 60%;
+}
+
+.slide_text_group_title {
+    font-size: 6.5vw;
+    font-weight: 500;
+    color: #5A4522;
+}
+
+.slide3_text_group1 {
+    flex-direction: column;
+    top: 15%;
+    left: 10%;
+}
+
+.slide3_text_group2 {
+    flex-direction: column;
+    top: 20%;
+    right: 0%;
+}
+
+.slide3_text_group3 {
+    flex-direction: column;
+    bottom: 10%;
+    left: 60%;
+}
+.slide_text_group_text{
+    font-size: 5vw;
+    width: 15rem;
+}
+
+.slide1_img1{
+    width: 55vw;
+    left: 2%;
+    bottom: 0;
+}
+
+.slide1_img2{
+    width: 27vw;
+    left: 75%;
+    bottom: 10%;
+}
+
+.slide2> img{
+    width: 25vw;
+}
+
+.slide2_img2{
+    right: 23%;
+    top: 34%;
+    rotate: 60deg;
+}
+.slide2_img3{
+    left: 15%;
+    bottom: 30%;
+    rotate: 15deg;
+}
+
+.slide2_img4{
+    right: 10%;
+    bottom: 5%;
+    rotate: -20deg;
+}
+
+.silde3-leaf{
+    width: 30vw;
+    position: absolute;
+}
+
+.slide4-img1{
+    width: 60vw;
+    bottom: 0;
+    left: -10%;
+}
+.slide4-img2{
+    width: 27vw;
+    left: 10%;
+}
+.slide4-img3{
+    width: 45vw;
+    top: 0;
+    right: 20%;
+}
+.slide4-img4{
+    width: 35vw;
+    bottom: 0;
+    right: 0;
+}
+/* *********CONTACT US SECTION******** */
+
+.contact_us_section {
+    margin: 60vw 0;
+}
+
+.contect_us_section_left {
+    padding: 8vw 0;
+}
+
+.contect_us_section_title {
+    font-size: 10vw;
+    width: 100%;
+    line-height: 12vw;
+}
+.contect_us_section_text {
+    font-size: 1.4rem;
+    color: #5A4522;
+    width: 15rem;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* *********FOOTER SECTION******** */
+.footer_section {
+    width: 200vw;
+    height: 70vh;
+}
+
+.footer_left_img {
+    position: relative;
+}
+.footer_waves {
+    position: absolute;
+    top: -23%;
+    z-index: -1;
+}
+
+.footer_waves>img {
+    width: 200vw;
+}
+
+.footer_bee_img {
+    width: 35vw;
+    height: 35vw;
+    top: 10%;
+    left: 5%;
+}
+
+.footer_flower_img {
+    bottom: 0;
+    height: 65vw;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.f_menu {
+    width: fit-content;
+    padding: 0 0.5vw;
+    position: relative;
+    height: 5vw;
+    /* margin-bottom:0.6vw ; */
+    overflow: hidden;
+    text-transform: capitalize;
+    /* background-color: #fc8181; */
+}
+
+.f_menu h1 {
+    transition: all ease-out 0.3s;
+    font-size: 5vw;
+    font-family: "default-font";
+    font-weight: 100;
+    color: #5A4522;
+    /* background-color: bisque; */
+}
+
+
+
+
+}
+
+@media only screen and (min-width: 476px) and (max-width: 767px) {
+    .section {
+        width: 200vw;
+        padding: 5vw 10vw;
+        min-height: 100vh;
+    }
+    .close img{
+        width: 8vw;
+        height: 8vw;
+    }
+    .extented_nav {
+        padding: 5vw 10vw;
+        width: 200vw;
+        height: 100vh;
+    }
+    .extented_nav_part1 .e_logo {
+        width: 7rem;
+        margin-bottom: 25vw;
+    }
+    .extented_nav_part1 .video_details {
+        width: 65vw;
+        font-size: 3vw; 
+        margin-top: 2vw;
+    }
+    .extented_nav_part2 {
+        /* background-color: red; */
+        width: 50%;
+        height: 70%;
+        padding: 0 5vw;
+    }
+    .extented_nav_part1 video {
+        width: 65vw;
+        height: 46vw;
+    }
+    .e_menu {
+        padding: 0 0.5vw;
+        height: 7vw;
+    }
+    
+    .e_menu h1 {
+        font-size: 5.9vw;
+        /* background-color: bisque; */
+    }
+    
+    .heading_title {
+        font-size: 6vw;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #5A4522;
+    }
+    .container {
+        width: 100%;
+        height: 150vh;
+    }
+    #beePathSvg{
+        /* background-color: rebeccapurple; */
+        position: absolute;
+        top: -25%;
+        left: -70%;
+        width: 100vw;
+        z-index: 10;
+        
+    }
+    .bee_img>img {
+        height: 27vw;
+        width: 27vw;
+    }
+    
+    .navbar {
+        padding: 10vw 0;
+    }
+    .nav_menu>img {
+        position: absolute;
+        height: 8.4vw;
+        width: 8.4vw;
+        
+        top: 35%;
+        right: 3%;
+        cursor: pointer;
+    }
+    
+    .nav_logo>img {
+        height: fit-content;
+        width: 25vw;
+    }
+
+    .product_add_cart_icon {
+        width: 5.5vw;
+        height: 5.5vw;
+        font-size: 3.5vw;
+    }
+    .product_title_container {
+        padding: 2vw 2.5vw;
+    }
+    .product_title {
+        font-size: 3.2vw;
+    }
+    .product_desc {
+        font-size: 2vw;
+        line-height: 2.2vw;
+    }
+    .small_section {
+        padding: 1vw 10vw;
+        width: 200vw;
+    }
+    .product_track {
+       margin-bottom: 40vw;
+    }
+    .product_price {
+        padding: 0.5vw 2.5vw;
+        font-size: 2vw;
+    }
+    
+    .product_track_title {
+        font-size: 8.5vw;
+        line-height: 8.8vw;
+    }
+    .product_track_overlay {
+        width: 6rem;
+        left: 63%;
+        top: 48%;
+    }
+    
+    .btn {
+        font-size: 2vw;
+        padding: 2vw 3vw;
+        margin-top: 3.5vw;
+    }
+
+    .product_popup_section_input input{
+        padding: 1.6vw 2vw;
+        font-size: 2.5vw;
+    
+    }
+    input:focus {
+        outline: none;
+      }
+    .honey_trace_search_btn{
+        padding: 1.6vw 2vw;
+        font-size: 2.5vw;
+        margin-left: -1vw;
+    }
+
+/* *********ABOUT HONEY SECTION******** */
+.about_honey_section {
+    margin-top: 10vw;
+    padding: 0;
+}
+.about_honey_section_left {
+    width: 50%;
+    position: sticky;
+    height: 150vh;
+}
+.about_honey_img_container {
+    height: 40vh;
+    width: 70vw;
+    background-color: #5A4522;
+}
+.about_honey_title {
+    font-size: 3rem;
+}
+
+.about_honey_section_right_blank {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.bee_section {
+    width: 200vw;
+    height: 100vh;
+    position: relative;
+}
+
+.bee_section_title {
+    width: 300px;
+    font-size: 3.5vw;
+}
+.bee_section_desc {
+    width: 50vw;
+    height: 30vh;
+    font-size: 3.4vw;
+}
+.bee_section_img_cover>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(100%);
+}
+
+.bee_section_img_cover {
+    width: 100%;
+    height: 200vh;
+    background-color: #fff;
+    position: absolute;
+}
+
+
+.about_section {
+    width: 200vw;
+}
+
+.about_section_slides {
+    width: 100%;
+    height: 200vh;
+}
+.slide {
+    width: 100%;
+    height: 200vh;
+}
+.slide_overlay_heading {
+    font-size: 20vw;
+}
+
+.slide1_img1{
+    width: 35vw;
+    left: 2%;
+    bottom: 0;
+}
+
+.slide1_img2{
+    width: 15vw;
+    left: 25%;
+    bottom: 10%;
+}
+
+.slide2> img{
+    width: 10vw;
+}
+
+.silde3-leaf{
+    width: 20vw;
+}
+
+.slide_text_group_title {
+    font-size: 4.7vw;
+}
+
+.slide4-img1{
+    width: 40vw;
+}
+.slide4-img2{
+    width: 17vw;
+    left: 25%;
+}
+.slide4-img3{
+    width: 30vw;
+}
+.slide4-img4{
+    width: 30vw;
+}
+
+.contact_us_section {
+    margin: 40vw 0;
+}
+
+.contect_us_section_left {
+    padding: 10vw 0;
+}
+
+.contect_us_section_title {
+    font-size: 6.5vw;
+    line-height: 6.8vw;
+}
+
+
+.footer_waves>img {
+    width: 200vw;
+}
+
+.footer_bee_img {
+    width: 10rem;
+    height: 10rem;
+    top: -10%;
+    left: 18%;
+}
+
+.footer_flower_img {
+    bottom: 0;
+    height: 20rem;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.f_menu {
+    width: fit-content;
+    padding: 0 0.5vw;
+    position: relative;
+    height: 5vw;
+    /* margin-bottom:0.6vw ; */
+    overflow: hidden;
+    text-transform: capitalize;
+    /* background-color: #fc8181; */
+}
+
+.f_menu h1 {
+    transition: all ease-out 0.3s;
+    font-size: 5vw;
+    font-family: "default-font";
+    font-weight: 100;
+    color: #5A4522;
+    /* background-color: bisque; */
+}
+
+.footer_waves {
+    top: -40%;
+    z-index: -1;
+}
+
+.footer_section {
+    width: 200vw;
+    margin-top: 60vw;
+}
+
+
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .btn {
+        font-size: 1.5vw;
+        padding: 1.5vw 2.5vw;
+        margin-top: 2.5vw;
+    }
+
+    .heading_title {
+        font-size: 4.5vw;
+        color: #5A4522;
+    }
+
+    .small_section {
+        padding: 1vw 7vw;
+        margin: 5vh 0;
+    }
+    .extented_nav_part2 {
+        height: 70%;
+    }
+
+    /* *********HERO SECTION******** */
+
+    .nav_logo>img {
+        height: fit-content;
+        width: 14vw;
+    }
+
+    .nav_menu>img {
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .section {
+        width: 100%;
+        padding: 4vw 5vw;
+        min-height: 100vh;
+    }
+
+    .hero_heading h1 {
+        font-size: 5rem;
+        line-height: 5.1rem;
+        /* margin-top: -20%; */
+    }
+
+    .hero_heading p {
+        font-size: 1.2rem;
+        margin-top: 2vw;
+    }
+
+    .right_container .hero_img>img {
+        width: 24rem;
+        height: 22rem;
+        margin-top: -5%;
+        margin-left: 5%;
+    }
+
+    .bee_img>img {
+        height: 17vw;
+        width: 17vw;
+    }
+
+    .right_container .bee_img {
+        top: 0%;
+        left: 20%;
+    }
+
+    #beePathSvg{
+        top: -35%;
+        left: -80%;
+        width: 55vw;
+        
+    }
+
+
+    /* *********PRODUCT SECTION******** */
+    .product_add_cart_icon {
+        width: 3vw;
+        height: 3vw;
+        font-size: 2vw;
+    }
+
+    .product_section {
+        min-height: 90vh;
+    }
+
+    .product_title {
+        font-size: 1.7vw;
+        line-height: 3vw;
+    }
+
+    .product_desc {
+        font-size: 1.3vw;
+        line-height: 1.5vw;
+        font-weight: 400;
+        width: 90%;
+        margin-top: 0.5vw;
+    }
+
+    .product_title_container {
+        padding: 1vw 1.5vw;
+        padding-top: 2vw;
+    }
+
+    .product_price {
+        padding: 0.5vw 1.5vw;
+        text-transform: uppercase;
+        font-size: 1.4vw;
+    }
+
+    /* *********PRODUCT TRACK SECTION******** */
+    .product_track_title {
+        font-size: 4.5vw;
+        width: 80%;
+        line-height: 4.8vw;
+    }
+
+    .product_track_overlay {
+        width: 6rem;
+        left: 63%;
+        top: 45%;
+    }
+    .product_popup_section_input input{ 
+        padding: 1vw 1.6vw;
+        font-size: 2vw;
+    
+    }
+    .honey_trace_search_btn{
+        font-size: 2vw;
+        margin-left:-1.5vw;
+        padding: 1vw 1.6vw;
+    }
+
+    /* *********PRODUCT TRACK SMALL SECTION******** */
+    .product_popup_section {
+        width: 40rem;
+        height: 28rem;
+    }
+
+    .product_popup_section_close {
+        width: 2rem;
+        height: 2rem;
+        /* background-color: red; */
+    }
+
+    .product_popup_section_desc {
+        font-size: 1.5vw;
+        width: 30%;
+    }
+
+    /* *********ABOUT HONEY SECTION******** */
+    .about_honey_section {
+        padding: 0;
+    }
+
+    .about_honey_section_left {
+        padding: 2vw 3vw;
+    }
+
+    .about_honey_title {
+        font-size: 2.5rem;
+    }
+
+    .about_honey_year_title {
+        font-size: 7rem;
+    }
+
+    .about_honey_img_container {
+        height: 40vh;
+        width: 40vw;
+        margin-top: -2vw;
+    }
+
+    .about_honey_section_right {
+        padding: 2vw 3vw;
+    }
+
+    .about_honey_historyBox {
+        width: 100%;
+    }
+
+    .about_honey_historyBox_desc {
+        padding: 1.5vw;
+        display: flex;
+        align-items: center;
+        color: #5A4522;
+        font-weight: 500;
+    }
+
+    /* *********HONEY NEUTRATION SECTION******** */
+    
+
+    /* *********BEE SECTION******** */
+    .bee_section_title {
+        width: 300px;
+        font-size: 2.5vw;
+    }
+    .bee_section_desc {
+        font-size: 2vw;
+    }
+    /* *********ABOUT US SECTION******** */
+    .slide-img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .slide_overlay_heading {
+        font-size: 12vw;
+    }
+
+    .slide_text_group {
+        width: 20rem;
+        font-size: 0.6rem;
+        /* background-color: red; */
+    }
+    .slide1_text_group1{
+        top: 15%;
+        left: 15%;
+        font-size: 1rem;
+    }
+
+    .slide_text_group_num {
+        width: 2rem;
+        height: 2rem;
+        top: 0;
+    }
+
+    .slide_rext_group_text {
+        font-size: 1rem;
+    }
+
+    .slide2_text_group1 {
+        top: 15%;
+        left: 15%;
+        font-size: 1rem;
+    }
+
+    .slide2_text_group2 {
+        top: 18%;
+        right: 10%;
+    }
+
+    .slide2_text_group4 {
+        left: 60%;
+        top: 60%;
+    }
+
+    .slide2_text_group4>.slide_rext_group_text {
+        padding-top: 4.4vw;
+    }
+
+    .slide3 .slide3-img2 {
+        transform: translateX(-50%) translateY(25%);
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .slide3 .slide3-img1 {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .slide_text_group_title {
+        font-size: 2vw;
+    }
+
+    .slide_text_group_text {
+        font-size: 1.8vw;
+    }
+
+    .slide3_text_group1 {
+        flex-direction: column;
+        top: 15%;
+        left: 20%;
+    }
+
+    .slide3_text_group2 {
+        flex-direction: column;
+        top: 20%;
+        right: 13%;
+    }
+
+    .slide3_text_group3 {
+        flex-direction: column;
+        bottom: 10%;
+        left: 40%;
+    }
+    .slide_rext_group_text{
+        font-size: 2.2vw;
+    }
+
+    /* *********CONTACT US SECTION******** */
+    .contact_us_section {
+        margin: 25vw 0;
+    }
+
+    .contact_us_section_bgimg {
+        width: 8rem;
+        top: -48%;
+        left: 5%;
+    }
+
+    .contect_us_section_left {
+        padding: 6.5vw 0;
+    }
+
+    .contect_us_section_title {
+        font-size: 4vw;
+        width: 100%;
+        line-height: 4.2vw;
+    }
+
+    .contect_us_section_text {
+        font-size: 0.8rem;
+        width: 12rem;
+    }
+
+    /* *********FOOTER SECTION******** */
+    .footer_section {
+        margin-top: 35vw;
+        height: 70vh;
+
+    }
+
+    .footer_waves {
+        top: -25%;
+    }
+
+    .footer_waves>img {
+        width: 100vw;
+    }
+
+    .footer_bee_img {
+        width: 9rem;
+        height: 9rem;
+        top: 5%;
+        left: 10%;
+    }
+
+    .footer_flower_img {
+        height: 18rem;
+
+    }
+
+    .div2 {
+        padding: 3vw 1vw;
+    }
+
+    .div3 {
+        padding: 3vw 5vw;
+        padding-right: 12vw;
+    }
+
+    .footer_menu {
+        padding: 3vw 1vw;
+    }
+
+    .f_menu {
+        height: 3.2vw;
+    }
+
+    .f_menu h1 {
+        font-size: 3vw;
+    }
+
+    .footer_text_part2 {
+        font-size: 1rem;
+    }
+
+    .social_link {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1.4vw;
+    }
+
+    .div5>.footer_text_part2 {
+        width: 12rem;
+    }
+
+    .footer_goto_btn_fixed {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .footer_goto_btn_float {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+    .btn {
+        font-size: 1.5vw;
+        padding: 1.5vw 2.5vw;
+        margin-top: 2.5vw;
+    }
+
+    /* *********HERO SECTION******** */
+
+    .nav_logo>img {
+        height: fit-content;
+        width: 12vw;
+    }
+
+    .nav_menu>img {
+        height: 3.2vw;
+        width: 3.2vw;
+    }
+
+    .section {
+        width: 100%;
+        padding: 4vw 7vw;
+        min-height: 100vh;
+    }
+
+    .hero_heading h1 {
+        font-size: 5rem;
+        line-height: 5.1rem;
+        /* margin-top: -20%; */
+    }
+
+    .hero_heading p {
+        font-size: 1.2rem;
+        margin-top: 2vw;
+    }
+
+    .right_container .hero_img>img {
+        width: 29rem;
+        height: 27rem;
+        margin-top: -5%;
+        margin-left: 5%;
+    }
+
+    .bee_img>img {
+        height: 14vw;
+        width: 14vw;
+    }
+
+    .right_container .bee_img {
+        top: -5%;
+        left: 18%;
+    }
+
+    /* *********PRODUCT SECTION******** */
+    .product_add_cart_icon {
+        width: 3vw;
+        height: 3vw;
+        font-size: 2vw;
+    }
+
+    .product_title {
+        font-size: 1.2vw;
+        line-height: 3.3vw;
+    }
+
+    .product_desc {
+        font-size: 1.1vw;
+        line-height: 1.1vw;
+        font-weight: 400;
+        width: 90%;
+        margin-top: 0.5vw;
+
+    }
+
+    .product_title_container {
+        padding: 1vw 1.5vw;
+        padding-top: 1.5vw;
+    }
+
+    .product_price {
+        padding: 0.5vw 1.5vw;
+        text-transform: uppercase;
+        font-size: 1vw;
+    }
+
+    /* *********PRODUCT TRACK SECTION******** */
+    .product_track_title {
+        font-size: 4.2vw;
+        width: 80%;
+        line-height: 4.8vw;
+    }
+
+    .product_track_overlay {
+        width: 7rem;
+        left: 63%;
+        top: 45%;
+    }
+
+    /* *********PRODUCT TRACK SMALL SECTION******** */
+    .product_popup_section {
+        width: 45rem;
+        height: 33rem;
+    }
+
+    .product_popup_section_close {
+        width: 2.2rem;
+        height: 2.2rem;
+        /* background-color: red; */
+    }
+
+    .product_popup_section_desc {
+        font-size: 1.3vw;
+        width: 35%;
+    }
+    /* bee section  */
+    .bee_section_desc {
+        width: 30vw;
+        font-size: 1.5vw;
+        font-weight: 500;
+    }
+
+    /* *********ABOUT HONEY SECTION******** */
+    .about_honey_section {
+        padding: 0;
+    }
+
+    .about_honey_section_left {
+        padding: 2vw 3vw;
+    }
+
+    .about_honey_title {
+        font-size: 2.5rem;
+    }
+
+    .about_honey_year_title {
+        font-size: 7rem;
+    }
+
+    .about_honey_img_container {
+        height: 40vh;
+        width: 40vw;
+        margin-top: -2vw;
+    }
+
+    .about_honey_section_right {
+        padding: 2vw 5vw;
+    }
+
+    .about_honey_historyBox {
+        width: 90%;
+    }
+
+    .about_honey_historyBox_desc {
+        padding: 1.5vw;
+        display: flex;
+        align-items: center;
+        color: #5A4522;
+        font-weight: 500;
+    }
+
+    /* *********HONEY NEUTRATION SECTION******** */
+ 
+
+
+    /* *********ABOUT US SECTION******** */
+    .slide-img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .slide_overlay_heading {
+        font-size: 12vw;
+    }
+
+    .slide_text_group {
+        width: 20rem;
+        /* background-color: red; */
+    }
+
+    .slide_text_group_num {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 0;
+    }
+
+    .slide_rext_group_text {
+        font-size: 1rem;
+    }
+
+    .slide2_text_group1 {
+        top: 15%;
+        left: 15%;
+    }
+
+    .slide2_text_group2 {
+        top: 18%;
+        right: 15%;
+    }
+
+    .slide2_text_group3 {
+        top: 67%;
+    }
+
+    .slide2_text_group4 {
+        left: 59%;
+        top: 62%;
+    }
+
+    .slide2_text_group4>.slide_rext_group_text {
+        padding-top: 4.4vw;
+    }
+
+    .slide3 .slide3-img2 {
+        transform: translateX(-60%) translateY(35%);
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .slide3 .slide3-img1 {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .slide_text_group_title {
+        font-size: 2vw;
+    }
+
+    .slide_text_group_text {
+        font-size: 1.8vw;
+        width: 90%;
+    }
+
+    .slide3_text_group1 {
+        flex-direction: column;
+        top: 15%;
+        left: 20%;
+    }
+
+    .slide3_text_group2 {
+        flex-direction: column;
+        top: 22%;
+        right: 10%;
+    }
+
+    .slide3_text_group3 {
+        flex-direction: column;
+        bottom: 5%;
+        left: 40%;
+    }
+
+    .slide_rext_group_text {
+        font-size: 1.6vw;
+        
+    }
+
+    .slide4_text_group2 {
+        bottom: 5%;
+        right: 20%;
+    }
+
+    /* *********FOOTER SECTION******** */
+    .footer_section {
+        margin-top: 25vw;
+        height: 70vh;
+
+    }
+
+    .footer_waves {
+        top: -38%;
+    }
+
+    .footer_waves>img {
+        width: 100vw;
+    }
+
+    .footer_bee_img {
+        width: 10rem;
+        height: 10rem;
+        top: 0%;
+        left: 10%;
+    }
+
+    .footer_flower_img {
+        height: 20rem;
+
+    }
+
+    .div2 {
+        padding: 3vw 1vw;
+    }
+
+    .div3 {
+        padding: 3vw 5vw;
+        padding-right: 12vw;
+    }
+
+    .footer_menu {
+        padding: 3vw 1vw;
+    }
+
+    .f_menu {
+        height: 3.2vw;
+    }
+
+    .f_menu h1 {
+        font-size: 3vw;
+    }
+
+    .footer_text_part2 {
+        font-size: 1.2rem;
+    }
+
+    .social_link {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1.4vw;
+    }
+
+    .div5>.footer_text_part2 {
+        width: 12rem;
+    }
+
+    .footer_goto_btn_fixed {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .footer_goto_btn_float {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+
+}
+
