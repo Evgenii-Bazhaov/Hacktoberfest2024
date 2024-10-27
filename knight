@@ -1,0 +1,27 @@
+Given an 8*8 empty chessboard in which a knight is placed at a position (X, Y). Your task is to find the number of positions in the chessboard knight can jump into in a single move .
+Note:- Rows and Columns are numbered through 1 to N.
+Input
+User Task:
+Since this will be a functional problem, you don't have to take input. You just have to complete the function Knight() that take integers X and Y as arguments.
+
+Constraints:-
+1 <= X <= 8
+1 <= Y <= 8
+Output
+Return the number of positions Knight can jump into in a single move.
+
+
+
+#pyhton code for knight jump :
+
+def Knight(X,Y):
+    count=0
+    for i in range(-2,3):
+        if i == 0:
+            continue
+        for j in range(-2,3):
+            if j==0 or abs(i) == abs(j):
+                continue
+            if 0<X+i<=8 and 0<Y+j<=8:
+                count +=1
+    return count                    
