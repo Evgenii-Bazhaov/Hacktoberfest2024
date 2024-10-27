@@ -134,7 +134,7 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 # BONUS🔥
 ### * Hey 👋, Everyone Don't forget to checkout this open source  event  also.
 ### * You don't need a new account just aunthenticate by your github account and start you Journey.
-### * Checkout this & start your journey: ➡️ [DevFestAi](https://devfest.ai/friend/cm121hwu50000w02bf3j6apfg)
+### * Checkout this & start your journey: ➡️ [DevFestAi](https://devfest.ai/friend/cm19emg67000013h1qg4bntmn)
 
 
 <!--# BONUS🔥
