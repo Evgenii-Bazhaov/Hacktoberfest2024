@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Calculator | minor project 2</title>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+body {
+  background:antiquewhite;
+}
+
+#header {
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+#calc {  
+  text-align: center;
+  width: 380px; 
+  display: block;
+  border-radius:8px;
+  border: 1px solid;
+  border-color: #abc6c2;
+  padding:8px;
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+  background: #224662;
+}
+
+#display {
+    background: #bcbcbc;
+    padding: 8px;
+    margin:16px 12px 10px 16px;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius:8px;
+}
+
+#result p{
+  font-size:1.8em;
+}
+
+#result,
+#previous {
+  text-align: right;
+  
+}
+
+#keyboard {
+  display: inline-block;  
+  text-align: center;
+  margin-bottom:8px;
+}
+
+.row {
+  margin-top: 4px;
+}
+
+.last-row {
+  float:left;
+  margin-top: 0;
+  margin-top: -11.5%;
+}
+
+button {
+  width: 62px;
+  margin: 2px;
+}
+.btn{
+    width: 62px;
+  margin: 2px;
+}
+
+.invisible {
+  width:0;
+}
+
+.btn-zero {
+  width: 127px;
+}
+
+.btn {  
+  height: 35px;
+}
+
+.btn-success{
+    float:right;
+    margin-left:4px;
+    height: 74px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+          <h3>Calculator</h3></div>
+        <div id="calc" class="text-center">
+          <div id="display">
+          <div id="result"><p>0</p></div>
+          <div id="previous"><p>0</p></div>
+          </div>
+            <div id="keyboard">
+            <div class="row">
+              <button class="btn btn-info" value="7">7</button>
+              <button class="btn btn-info" value="8">8</button>
+              <button class="btn btn-info" value="9">9</button>
+              <button class="btn btn-danger" value="ac">AC</button>
+              <button class="btn btn-danger" value="ce">CE</button>
+            </div>
+            <div class="row">
+              <button class="btn btn-info" value="4">4</button>
+              <button class="btn btn-info" value="5">5</button>
+              <button class="btn btn-info" value="6">6</button>
+              <button class="btn btn-warning" value="/">/</button>
+              <button class="btn btn-warning" value=""></button>
+            </div>
+            <div class="row">
+              <button class="btn btn-info" value="1">1</button>
+              <button class="btn btn-info" value="2">2</button>
+              <button class="btn btn-info" value="3">3</button>
+              <button class="btn btn-warning" value="+">+</button>
+              <button class="btn btn-success btn-result ab" value="=">=</button>
+              
+            </div>
+            <div class="row last-row">
+              <button class="btn btn-info btn-zero" value="0">0</button>
+               <!-- <button class="invisible" value=""></button> -->
+              <button class="btn btn-warning" value=".">.</button>
+              <button class="btn btn-warning" value="-">-</button>
+              <!-- <button class="invisible" value=""></button> -->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function() {
+  var eq = "";
+  var curNumber="";
+  var result = "";
+  var entry = "";
+  var reset = false;
+
+  $("button").click(function() {    
+    entry = $(this).attr("value");   
+    
+    if (entry === "ac") {
+      entry=0;
+      eq=0;
+      result=0;
+      curNumber=0;
+      $('#result p').html(entry);
+      $('#previous p').html(eq);  
+    }
+    
+    else if (entry === "ce") {
+      if (eq.length > 1) {
+        eq = eq.slice(0, -1);        
+        $('#previous p').html(eq);
+      }
+      else {
+        eq = 0;  
+        $('#result p').html(0);
+      }
+      
+      $('#previous p').html(eq);
+      
+      if (curNumber.length > 1) {
+        curNumber = curNumber.slice(0, -1);        
+        $('#result p').html(curNumber);  
+      }
+      else {
+        curNumber = 0;  
+        $('#result p').html(0);
+      }
+      
+    }
+    
+    else if (entry === "=") {
+      result = eval(eq);
+      $('#result p').html(result); 
+      eq += "="+result;
+      $('#previous p').html(eq);
+      eq = result;
+      entry = result;
+      curNumber = result;
+      reset = true;
+    }
+    
+    else if (isNaN(entry)) {   //check if is not a number, and after that, prevents for multiple "." to enter the same number
+      if (entry !== ".") {     
+        reset = false;       
+        if (curNumber === 0 || eq === 0) { 
+          curNumber = 0;
+          eq = entry;         
+        }
+        else {
+          curNumber = "";
+          eq += entry;
+        }     
+        $('#previous p').html(eq); 
+      }
+      else if (curNumber.indexOf(".") === -1) { 
+        reset = false;
+        if (curNumber === 0 || eq === 0) { 
+          curNumber = 0.;
+          eq = 0.;           
+        }
+        else {
+          curNumber += entry;
+          eq += entry;        
+        }
+        $('#result p').html(curNumber);
+        $('#previous p').html(eq);        
+      }      
+    }
+        
+    else {  
+      if (reset) {
+        eq = entry;
+        curNumber = entry;       
+        reset = false;
+      }
+      else {
+        eq += entry; 
+        curNumber += entry;        
+        }
+       $('#previous p').html(eq); 
+       $('#result p').html(curNumber);
+      }   
+    
+    
+    if (curNumber.length > 10 || eq.length > 26) {
+      $("#result p").html("0");
+      $("#previous p").html("Too many digits");
+      curNumber ="";
+      eq="";
+      result ="";
+      reset=true;
+    }
+    
+    if (result.indexOf(".") !== -1) {
+      result = result.truncate()
+    }
+    
+  });
+    
+
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+You are given an array a consisting of n elements a1, a2, ..., an. Array a has a special property, which is:
+
+ai = (ai - 1 + 1) % m, for each i (1 < i ≤ n)
+You are given the array a with some lost elements from it, each lost element is replaced by -1. Your task is to find all the lost elements again, can you?
+
+Input
+The first line contains an integer T, where T is the number of test cases.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 1000) (1 ≤ m ≤ 109), where n is the size of the array, and m is the described modulus in the problem statement.
+
+The second line of each test case contains n integers a1, a2, ..., an ( - 1 ≤ ai < m), giving the array a. If the ith element is lost, then ai will be -1. Otherwise, ai will be a non-negative integer less than m.
+
+It is guaranteed that the input is correct, and there is at least one non-lost element in the given array.
+
+Output
+For each test case, print a single line containing n integers a1, a2, ..., an, giving the array a after finding all the lost elements.
+
+It is guaranteed that an answer exists for the given input.
+
+Example
+InputCopy
+4
+5 10
+1 2 3 4 5
+4 10
+7 -1 9 -1
+6 7
+5 -1 -1 1 2 3
+6 10
+5 -1 7 -1 9 0
+OutputCopy
+1 2 3 4 5
+7 8 9 0
+5 6 0 1 2 3
+5 6 7 8 9 0
+Note
+As input/output can reach huge size it is recommended to use fast input/output methods: for example, prefer to use scanf/printf instead of cin/cout in C++, prefer to use BufferedReader/PrintWriter instead of Scanner/System.out in Java.
+
+code:
+t = int(input())
+for i in range(t):
+    n,m=map(int,input().split())
+    a=list(map(int,input().split()))
+    for i in range(1,n):
+        if a[i]==-1 and a[i-1]!=-1:
+            a[i]=(a[i-1]+1)%m
+    for i in range(n-2,-1,-1):
+        if a[i]==-1 and a[i+1]!=-1:
+            a[i]=(a[i+1]-1+m)%m       
+    for i in range(n):
+        print(a[i], end=' ') 
+    print()          
+
+

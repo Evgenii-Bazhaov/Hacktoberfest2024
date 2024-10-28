@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="popup.css"> 
+</head>
+<body>  
+  <!-- start of body -->
+  <div class="container">
+    <h1>LeetCode Problem Helper</h1>
+    <!-- Adding buttons to the UI  -->
+    <button id="addQuestionButton">Add to submitted list</button>  
+    <button id="practiceButton">Practice random Questions</button>
+    <button id="showSavedQuestionsButton">Show submitted Questions</button>
+    <button id="reviewButton">Add to Review Later</button>
+    <button id="removeReviewButton">Remove From Review list</button>
+    <button id="showReviewButton">Show Review Question list</button>
+
+
+    
+    <!-- Assigning different HTML classes and ids to different components in the code like 
+       saved question,review question,practice list etc. -->
+    <div class="questions">
+      <div class="saved-questions">
+        <h2>Saved Questions</h2>
+        <div id="questionsList" class="question-list"></div>
+      </div>
+      <div class="review-questions">
+        <h2>Review Questions</h2>
+        <div id="reviewList" class="question-list"></div>
+      </div>
+      <div class="practice-questions">
+        <h2>Practice Mode</h2>
+        <div id="practiceList" class="question-list"></div>
+      </div>
+    </div>
+  </div>
+  <!-- connecting the javascript file -->
+  <script src="popup.js"></script>  
+</body>
+</html>

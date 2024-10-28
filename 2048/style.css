@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #faf8ef;
+}
+
+.game-container {
+    text-align: center;
+    margin-top: -50px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #776e65;
+    margin-bottom: 10px;
+}
+
+.grid-container {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #bbada0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.grid-cell {
+    background-color: #cdc1b4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #776e65;
+    animation: appear 0.2s ease-in-out;
+}
+
+.grid-cell[data-value="2"] { background-color: #eee4da; }
+.grid-cell[data-value="4"] { background-color: #ede0c8; }
+.grid-cell[data-value="8"] { background-color: #f2b179; color: #f9f6f2; }
+.grid-cell[data-value="16"] { background-color: #f59563; color: #f9f6f2; }
+.grid-cell[data-value="32"] { background-color: #f67c5f; color: #f9f6f2; }
+.grid-cell[data-value="64"] { background-color: #f65e3b; color: #f9f6f2; }
+.grid-cell[data-value="128"] { background-color: #edcf72; color: #f9f6f2; }
+.grid-cell[data-value="256"] { background-color: #edcc61; color: #f9f6f2; }
+.grid-cell[data-value="512"] { background-color: #edc850; color: #f9f6f2; }
+.grid-cell[data-value="1024"] { background-color: #edc53f; color: #f9f6f2; }
+.grid-cell[data-value="2048"] { background-color: #edc22e; color: #f9f6f2; }
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score-container {
+    margin-bottom: 20px;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    background-color: #8f7a66;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #a38e79;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 100px auto;
+    width: 300px;
+}
+
+#restart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restart-btn:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,222 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add Book Container */
+.add-book-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #6e45e2, #88d3ce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Add Book Content Box */
+.add-book-content {
+  text-align: center;
+  color: #fff;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  animation: slideIn 1.5s ease-out;
+}
+
+/* Title */
+.add-book-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Input Fields */
+.add-book-input {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #222;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.add-book-input:focus {
+  border-color: #88d3ce;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4d4f;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Upload Button */
+.cta-button {
+  padding: 15px 40px;
+  background-color: #f67280;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #c06c84;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add Book Container */
+.add-book-container {
+    height: 100vh;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Add Book Content Box */
+  .add-book-content {
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    animation: slideIn 1.5s ease-out;
+  }
+  
+  /* Title */
+  .add-book-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  /* Input Fields */
+  .add-book-input {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #222;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .add-book-input:focus {
+    border-color: #88d3ce;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #ff4d4f;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  /* Upload Button */
+  .cta-button {
+    padding: 15px 40px;
+    background-color: #f67280;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #c06c84;
+    transform: translateY(-5px);
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

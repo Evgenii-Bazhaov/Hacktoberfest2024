@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+
+body{
+    background-color: yellow;
+    font-family: 'Autour One', cursive;
+    margin: 0;
+    height: 100%;
+}
+.calculator{
+    height: 100%;
+    text-align: center;
+    border: solid black 2px;
+    padding: 15px;
+    background-color: grey;
+}
+.display{
+    width: 99.5%;
+    padding: 45px;
+    margin-bottom: 15px;
+    font-size: xx-large;
+}
+.calcButton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.button,
+.acButton,
+.eqButton{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    flex-basis: 25%;
+    padding: 45px;
+    font-family: inherit;
+}
+.eqButton{
+    padding-left: 732px;
+    padding-right: 732px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    font-size: xx-large;
+}
+.acButton{
+    font-size: 20px;
+}

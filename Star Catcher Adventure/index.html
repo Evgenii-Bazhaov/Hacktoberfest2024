@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Falling Stars</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #gameArea {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            font-size: 30px;
+            cursor: pointer;
+            animation: fall linear;
+        }
+        .score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .game-over {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        @keyframes fall {
+            0% { top: 0px; }
+            100% { top: 100vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Catch the Falling Stars</h1>
+    <div id="gameArea"></div>
+    <div class="score" id="score">Score: 0</div>
+    <div class="game-over" id="gameOver">Game Over!</div>
+
+    <script>
+        const gameArea = document.getElementById('gameArea');
+        const scoreElement = document.getElementById('score');
+        const gameOverElement = document.getElementById('gameOver');
+        let score = 0;
+        let starSpeed = 5;
+        let missedStars = 0; // Keeps track of missed stars for game-over condition
+        const maxMissedStars = 5; // Game over after 5 missed stars
+
+        // Function to create a falling star
+        function createStar() {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.textContent = '⭐';  // Using a star emoji
+            star.style.left = Math.random() * (window.innerWidth - 30) + 'px';  // Random horizontal position
+            gameArea.appendChild(star);
+
+            // Set the duration of the fall animation
+            const fallDuration = Math.random() * 5 + 4; // Random fall time between 4 to 9 seconds
+            star.style.animationDuration = fallDuration + 's';
+
+            // Remove the star when it reaches the bottom (if missed)
+            star.addEventListener('animationend', () => {
+                star.remove();
+                missedStars++;
+                if (missedStars >= maxMissedStars) {
+                    gameOver();
+                }
+            });
+
+            // Event listener for when the player clicks on a star
+            star.addEventListener('click', () => {
+                score += 10; // Increase score by 10
+                scoreElement.textContent = `Score: ${score}`;
+                star.remove(); // Remove the star on click
+            });
+        }
+
+        // Function to start the game
+        function startGame() {
+            // Create stars every 1 second
+            const starCreationInterval = setInterval(() => {
+                if (missedStars < maxMissedStars) {
+                    createStar();
+                } else {
+                    clearInterval(starCreationInterval); // Stop creating stars on game over
+                }
+            }, 1000);
+
+            // Gradually increase difficulty (faster falling stars)
+            setInterval(() => {
+                if (starSpeed < 20) {
+                    starSpeed += 0.5; // Increase star falling speed over time
+                }
+            }, 5000);  // Increase speed every 5 seconds
+        }
+
+        // Function to handle game over
+        function gameOver() {
+            gameOverElement.style.display = 'block';  // Display game over message
+            document.querySelectorAll('.star').forEach(star => star.remove());  // Remove all stars
+            gameArea.innerHTML = '';  // Clear game area
+        }
+
+        startGame(); // Start the game when the page loads
+    </script>
+
+</body>
+</html>

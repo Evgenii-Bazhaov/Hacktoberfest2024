@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mazeCanvas {
+    border: 2px solid #00ff00;
+    background-color: black;
+    display: block;
+}
+
+#info-panel {
+    margin-top: 20px;
+    text-align: center;
+}

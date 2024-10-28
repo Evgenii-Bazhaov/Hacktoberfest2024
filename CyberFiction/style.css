@@ -1,0 +1,337 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(fonts/Gilroy-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+html,
+body {
+    user-select: none;
+cursor: none;
+  height: 100%;
+  width: 100%;
+  font-family: Gilroy;
+  background-color: #f1f1f1;
+}
+
+.outer-cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  transition: all 220ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 2500000000;
+}
+
+.inner-cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 2500000000000;
+}
+
+.hover {
+  opacity: 0;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: 0.9;
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+}
+
+#page1 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#page2 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#page3 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#page4 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+canvas {
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+#loop {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 25%;
+  font-size: 100px;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+#loop > h1 {
+  font-weight: 400;
+  animation-name: anim;
+  animation-duration: 35s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#loop > h1 > span {
+  -webkit-text-stroke: 1.2px black;
+  color: transparent;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7%;
+  width: 100%;
+  position: fixed;
+  padding: 0px 30px;
+  background-color: #f1f1f1;
+  z-index: 101;
+}
+
+#nav > h3 {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+#nav > button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: 0.5s ease all;
+}
+
+#nav button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#page1 > h3 {
+  position: absolute;
+  top: 60%;
+  font-weight: 400;
+  color: #7c7c7c;
+  left: 5%;
+}
+#page1 > h4 {
+  position: absolute;
+  top: 62%;
+  left: 25%;
+  font-weight: 500;
+}
+#page2 > #right-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+#page2 > #right-text > h3 {
+  font-weight: 400;
+  color: #7c7c7c;
+}
+#page2 > #right-text > h1 {
+  line-height: 1.5;
+  font-size: 50px;
+}
+#page2 > #left-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  text-align: end;
+}
+#page2 > #left-text > h1 {
+  font-size: 50px;
+  line-height: 1.5;
+}
+#page2 > #left-text > h3 {
+  color: #7c7c7c;
+  font-weight: 400;
+}
+
+#page3 > #text1 {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+#page3 > #text1 > h3 {
+  color: #7c7c7c;
+  font-weight: 400;
+}
+#page3 > #text1 > h1 {
+  font-size: 60px;
+  line-height: 1.5;
+}
+#page3 > #text2 {
+  position: absolute;
+  top: 55%;
+  right: 5%;
+  text-align: end;
+}
+#page3 > #text2 > p {
+  color: #7c7c7c;
+  font-weight: 400;
+}
+#page4 > #text3 {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  text-align: end;
+}
+#page4 > #text3 > h3 {
+  color: #7c7c7c;
+  font-weight: 400;
+}
+#page4 > #text3 > h1 {
+  font-size: 70px;
+}
+
+@media screen and (max-width: 321px) {
+  #nav {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #nav {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #nav > h3 {
+    font-size: 18px;
+  }
+
+  #nav > button {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #loop > h1 {
+    top: 20%;
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #page2 > #left-text > h1 {
+    font-size: 30px;
+  }
+
+  #page2 > #right-text > h1 {
+    font-size: 30px;
+  }
+
+  #page2 > #right-text > h3 {
+    font-size: 15px;
+  }
+
+  #page2 > #left-text > h3 {
+    font-size: 15px;
+  }
+
+  #page3 > #text1 > h3 {
+    font-size: 13px;
+  }
+  #page3 > #text1 > h1 {
+    font-size: 40px;
+  }
+  #page3 > #text2 > p {
+    font-size: 10px;
+  }
+
+  #page4 > #text3 > h3 {
+    font-size: 13px;
+  }
+  #page4 > #text3 > h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #page2 > #left-text > h1 {
+    font-size: 20px;
+  }
+
+  #page2 > #right-text > h1 {
+    font-size: 20px;
+  }
+
+  #page2 > #right-text > h3 {
+    font-size: 13px;
+  }
+
+  #page2 > #left-text > h3 {
+    font-size: 13px;
+  }
+
+  #page3 > #text1 > h3 {
+    font-size: 10px;
+  }
+  #page3 > #text1 > h1 {
+    font-size: 30px;
+  }
+  #page3 > #text2 > p {
+    font-size: 8px;
+  }
+
+  #page4 > #text3 > h3 {
+    font-size: 11px;
+  }
+  #page4 > #text3 > h1 {
+    font-size: 40px;
+  }
+}
