@@ -165,5 +165,19 @@ The dataset is taken from kaggle.
 
 Here's the reference: https://www.kaggle.com/datasets/andrewmvd/helmet-detection/data
 
+# Deployment 
+This project is deployed on streamlit server.
+Steps to run this project are:
+
+- Clone the repo.
+- First install streamlit package "pip install streamlit"
+- Then go to terminal, then type "cd Helmet_Detection".
+- Then run this command "streamlit run app.py"
+
+If the above steps doesn't work, you may use this deployed link 
+https://helmetdetection-twxcyn5veugnr4ojqqbgrd.streamlit.app/
+
+
+
 
 
