@@ -13,6 +13,7 @@
     "@taquito/beacon-wallet": "^20.1.0",
     "@taquito/taquito": "^20.1.0",
     "axios": "^1.7.7",
+    "backend": "file:",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ethers": "^6.13.4",

@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "axios": "^1.7.7",
+    "bpgas": "file:",
     "i18next": "^23.15.1",
     "i18next-http-backend": "^2.6.1",
     "react": "^18.3.1",

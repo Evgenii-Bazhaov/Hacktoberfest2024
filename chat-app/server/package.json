@@ -20,6 +20,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.0",
     "nodemon": "^3.0.3",
+    "server": "file:",
     "socket.io": "^4.7.4"
   }
 }

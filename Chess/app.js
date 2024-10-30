@@ -299,7 +299,6 @@ function updateTimer2() {
 }
 
 
-
 function stopTimer() {
     clearInterval(timerInterval);
 }

@@ -20,6 +20,7 @@
     "ipfs-http-client": "^60.0.1",
     "lucide-react": "^0.453.0",
     "next-themes": "^0.3.0",
+    "nft-marketplace": "file:",
     "postcss": "^8.4.47",
     "postcss-preset-env": "^10.0.7",
     "react": "^18.3.1",

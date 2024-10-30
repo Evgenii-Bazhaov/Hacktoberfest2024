@@ -24,7 +24,8 @@
     "react-datepicker": "^6.9.0",
     "react-dom": "^18",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zoom_clone_project": "file:"
   },
   "devDependencies": {
     "@types/node": "^20",
