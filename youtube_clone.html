@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple YouTube Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #search {
+            width: 50%;
+            padding: 5px;
+        }
+
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .video {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 200px;
+        }
+
+        .video-title {
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyTube</h1>
+        <input type="text" id="search" placeholder="Search...">
+    </header>
+    <main>
+        <div class="video-container" id="videoContainer">
+            <!-- Videos will be inserted here dynamically -->
+        </div>
+    </main>
+    <script>
+        const videos = [
+            {
+                title: "Sample Video 1",
+                url: "https://www.youtube.com/embed/tgbNymZ7vqY"
+            },
+            {
+                title: "Sample Video 2",
+                url: "https://www.youtube.com/embed/3JZ_D3ELwOQ"
+            },
+            {
+                title: "Sample Video 3",
+                url: "https://www.youtube.com/embed/oHg5SJYRHA0"
+            }
+        ];
+
+        const videoContainer = document.getElementById("videoContainer");
+
+        function displayVideos(videoList) {
+            videoContainer.innerHTML = "";
+            videoList.forEach(video => {
+                const videoDiv = document.createElement("div");
+                videoDiv.classList.add("video");
+                videoDiv.innerHTML = `
+                    <iframe src="${video.url}" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-title">${video.title}</div>
+                `;
+                videoContainer.appendChild(videoDiv);
+            });
+        }
+
+        document.getElementById("search").addEventListener("input", (event) => {
+            const query = event.target.value.toLowerCase();
+            const filteredVideos = videos.filter(video => video.title.toLowerCase().includes(query));
+            displayVideos(filteredVideos);
+        });
+
+        // Initial display of videos
+        displayVideos(videos);
+    </script>
+</body>
+</html>
