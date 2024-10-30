@@ -1,24 +1,29 @@
-You are given an array a consisting of n elements a1, a2, ..., an. Array a has a special property, which is:
+"""
+Recover Lost Elements in a Special Array
 
-ai = (ai - 1 + 1) % m, for each i (1 < i ≤ n)
-You are given the array a with some lost elements from it, each lost element is replaced by -1. Your task is to find all the lost elements again, can you?
+Problem:
+You are given an array `a` of size `n` with some lost elements, represented by -1.
+The array follows a special pattern:
+    a[i] = (a[i - 1] + 1) % m for all 1 < i ≤ n
+Given the array with some elements lost, the task is to recover and find all the missing values.
 
-Input
-The first line contains an integer T, where T is the number of test cases.
+Input:
+The first line contains an integer `T`, the number of test cases.
+Each test case includes:
+    - Two integers `n` and `m`: the size of the array and the modulus value.
+    - An array `a` of `n` integers where lost elements are marked as `-1`.
 
-The first line of each test case contains two integers n and m (1 ≤ n ≤ 1000) (1 ≤ m ≤ 109), where n is the size of the array, and m is the described modulus in the problem statement.
+Output:
+For each test case, output the recovered array on a new line.
 
-The second line of each test case contains n integers a1, a2, ..., an ( - 1 ≤ ai < m), giving the array a. If the ith element is lost, then ai will be -1. Otherwise, ai will be a non-negative integer less than m.
+Constraints:
+1 ≤ T ≤ 100
+1 ≤ n ≤ 1000
+1 ≤ m ≤ 10^9
+At least one element in each array is known (not -1).
 
-It is guaranteed that the input is correct, and there is at least one non-lost element in the given array.
-
-Output
-For each test case, print a single line containing n integers a1, a2, ..., an, giving the array a after finding all the lost elements.
-
-It is guaranteed that an answer exists for the given input.
-
-Example
-InputCopy
+Example:
+Input:
 4
 5 10
 1 2 3 4 5
@@ -28,27 +33,60 @@ InputCopy
 5 -1 -1 1 2 3
 6 10
 5 -1 7 -1 9 0
-OutputCopy
+
+Output:
 1 2 3 4 5
 7 8 9 0
 5 6 0 1 2 3
 5 6 7 8 9 0
-Note
-As input/output can reach huge size it is recommended to use fast input/output methods: for example, prefer to use scanf/printf instead of cin/cout in C++, prefer to use BufferedReader/PrintWriter instead of Scanner/System.out in Java.
 
-code:
-t = int(input())
-for i in range(t):
-    n,m=map(int,input().split())
-    a=list(map(int,input().split()))
-    for i in range(1,n):
-        if a[i]==-1 and a[i-1]!=-1:
-            a[i]=(a[i-1]+1)%m
-    for i in range(n-2,-1,-1):
-        if a[i]==-1 and a[i+1]!=-1:
-            a[i]=(a[i+1]-1+m)%m       
-    for i in range(n):
-        print(a[i], end=' ') 
-    print()          
+Approach:
+1. For each test case, parse the input values `n` and `m`.
+2. Traverse the array `a` from left to right:
+   - If an element is missing (`-1`) and the previous element is known,
+     calculate the missing element as `(a[i - 1] + 1) % m`.
+3. Traverse from right to left:
+   - If an element is missing and the next element is known,
+     calculate the missing element as `(a[i + 1] - 1 + m) % m`.
+4. Print the fully recovered array for each test case.
 
+Note:
+As input/output size can be large, using efficient input/output methods is recommended.
 
+"""
+
+import sys
+input = sys.stdin.read
+
+def recover_array(n, m, a):
+    # Forward pass: Fill missing values based on previous known values
+    for i in range(1, n):
+        if a[i] == -1 and a[i - 1] != -1:
+            a[i] = (a[i - 1] + 1) % m
+
+    # Backward pass: Fill missing values based on next known values
+    for i in range(n - 2, -1, -1):
+        if a[i] == -1 and a[i + 1] != -1:
+            a[i] = (a[i + 1] - 1 + m) % m
+
+    return a
+
+def main():
+    data = input().splitlines()
+    T = int(data[0])
+    results = []
+
+    line = 1
+    for _ in range(T):
+        n, m = map(int, data[line].split())
+        a = list(map(int, data[line + 1].split()))
+        line += 2
+
+        recovered_array = recover_array(n, m, a)
+        results.append(" ".join(map(str, recovered_array)))
+
+    # Output all results at once
+    sys.stdout.write("\n".join(results) + "\n")
+
+if __name__ == "__main__":
+    main()
