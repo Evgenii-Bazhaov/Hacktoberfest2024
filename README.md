@@ -40,13 +40,13 @@ Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is 
 
 **This is a beginner-friendly project to help you get started with your [Hacktoberfest](https://hacktoberfest.digitalocean.com/). If you don't know where to start, feel free to watch the videos linked below and read the contribution rules. Happy Learning <3 💙 !!**
 
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 # 📌 Videos 📽️:
 
 - [Hacktoberfest Intro](https://www.youtube.com/watch?v=mq_FIHdxmIk)
 - [How to pull request [Overview]](https://youtu.be/DIj2q02gvKs)
 - [Merge Conflict / comment](https://youtu.be/zOx5PJTY8CI)
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 # Contribution Rules📚:
 
 - You are allowed to make pull requests that break the rules. We just merge it ;)
@@ -55,7 +55,7 @@ Hey there, awesome people! 👋 Welcome to **HacktoberFest 2024**! 🚀 This is 
 - Styling/code can be pretty, ugly, or stupid, big or small, as long as it works
 <!-- - Add your name to the contributorsList file. -->
 - Try to keep pull requests small to minimize merge conflicts
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Getting Started 🤩🤗:
 
 - Fork the repo (button on top)
@@ -99,7 +99,7 @@ git push origin my-new-branch
 - Create a new pull request from your forked repository
 
 <br>
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Avoid Conflicts {Syncing your fork}
 
 An easy way to avoid conflicts is to add an 'upstream' for your git repo, as other PRs may be merged while you're working on your branch/fork.   
@@ -123,21 +123,17 @@ git merge upstream/master
 This will give you any eventual conflicts and allow you to easily solve them in your repo. It's a good idea to use it frequently in between your own commits to make sure that your repo is up to date with its parent.
 
 For more information on syncing forks, [read this article from GitHub](https://help.github.com/articles/syncing-a-fork/).
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+# 🏅 Hacktoberfest Swag
 
-## Swags of Hacktoberfest:
+After 4 successfully merged PRs, you’ll be eligible for a Hacktoberfest T-shirt and stickers delivered to your doorstep! 🎁
 
-Many candidates get attracted to Hacktoberfest for the swags. After 4 successfully merged pull requests, as of 2024, you will be eligible to get a Hacktoberfest T-shirt and some stickers delivered to your doorstep.
+<p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" alt="t-shirt image"></p> <p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" alt="stickers image"></p>
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-<li><B><p><img src="https://miro.medium.com/max/1050/1*4JctIO7irt8hFxBmTvUpiQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="t-shirt image"></a></p><p><img src="https://miro.medium.com/max/1050/1*jkffr74bq5RsQ_xqDhgqYQ.jpeg" width="400" height="225" style="width: 400px; height: 225px;" alt="stickers image"></p>
-</b></li>
+
 
 # BONUS🔥
-### * Hey 👋, Everyone Don't forget to checkout this open source  event  also.
-### * You don't need a new account just aunthenticate by your github account and start you Journey.
-### * Checkout this & start your journey: ➡️ [DevFestAi](https://devfest.ai/friend/cm19emg67000013h1qg4bntmn)
-
-
-<!--# BONUS🔥
 ### * Hey 👋, Everyone You all are doing great, In my view you all are an open-source enthusiast, So Don't forget to checkout this open source  event  also. This is suggested by my friend.
 ### *  Please also upvote for my friend  in  event. You don't need a new account just aunthenticate by your github account and start you Journey.
 ### * Checkout this & authenticate there to start contributing: ➡️ [DevFestAi](https://devfest.ai/friend/cm121hwu50000w02bf3j6apfg) -->
@@ -146,7 +142,7 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 <li><B><p><img src="https://devfest.ai/svgs/Swag.svg" width="700" height="300" alt="t-shirt image"></a></p></p>
 </b></li>
 
-
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 # FAQs (Frequently Asked Questions)
 
 - Who all can contribute?
@@ -160,7 +156,7 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 - Should I come closer to the text saying 'Don't come closer' on the left side of the home tab?
   - Nope.
 - How many pull requests (PRs) must be made if I want to get an awesome T-shirt from Hacktoberfest 2024?
-  - 4
+
 - How do I track my progress to get an awesome shirt from Hacktoberfest 2024?
   - [Go to:](https://hacktoberfest.digitalocean.com/profile/). (Check out your own stats at the top right)
 - What is the duration of Hacktoberfest 2024?
@@ -170,10 +166,13 @@ Many candidates get attracted to Hacktoberfest for the swags. After 4 successful
 
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited, and the merge conflicts are horrible :astonished: <3*
 <br>
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+# Top Contributors 💖
 
-## Top Contributors
 
-A heartfelt thank you to the following individuals for their valuable contributions to this project. Your support and dedication are greatly appreciated:
+- A heartfelt thank you to everyone who contributed to this project. Your support and dedication are greatly appreciated! 🙏
+
+
 
 <a href="https://github.com/Evgenii-Bazhaov/Hacktoberfest2024/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024&max=500&columns=20&anon=1" />
