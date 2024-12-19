@@ -171,10 +171,14 @@ After 4 successfully merged PRs, you’ll be eligible for a Hacktoberfest T-shir
 - A heartfelt thank you to everyone who contributed to this project. Your support and dedication are greatly appreciated! 🙏
 
 
-
-<a href="https://github.com/Evgenii-Bazhaov/Hacktoberfest2024/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024&max=500&columns=20&anon=1" />
+<a href="https://github.com/Evgenii-Bazhaov/Hacktoberfest2024/graphs/contributors" target="_blank" rel="noopener noreferrer" title="View Contributors">
+  <img 
+    src="https://contrib.rocks/image?repo=Evgenii-Bazhaov/Hacktoberfest2024" 
+    alt="Contributors to Hacktoberfest 2024 repository" 
+    style="max-width: 100%; height: auto;" 
+  />
 </a>
+
 
 
 
