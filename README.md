@@ -165,6 +165,8 @@ After 4 successfully merged PRs, you’ll be eligible for a Hacktoberfest T-shir
 ###### *We will do our best to merge as much as possible from everyone. However, time is limited, and the merge conflicts are horrible :astonished: <3*
 <br>
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+
 # Top Contributors 💖
 
 
