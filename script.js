@@ -1,34 +1,28 @@
-const passwordList = document.getElementById("passwordList");
+const getQuoteBtn = document.getElementById("getQuoteBtn");
+const quoteText = document.getElementById("quoteText");
 
-function addPassword() {
-  const website = document.getElementById("website").value;
-  const password = document.getElementById("password").value;
+getQuoteBtn.addEventListener("click", () => {
+    getQuoteBtn.classList.add("loading");
+    getQuoteBtn.textContent = "Loading...";
+    getQuote();
+});
 
-  if (website && password) {
-    const listItem = document.createElement("li");
-    listItem.classList.add("password-item");
+// Initially, remove loading state
+getQuoteBtn.classList.remove("loading");
+getQuoteBtn.textContent = "Get Quote";
 
-    listItem.innerHTML = `
-            <span><strong>${website}</strong>: <span class="password-text">******</span></span>
-            <span class="show-btn" onclick="togglePassword(this, '${password}')">Show</span>
-        `;
-
-    passwordList.appendChild(listItem);
-    document.getElementById("website").value = "";
-    document.getElementById("password").value = "";
-  } else {
-    alert("Please fill out both fields.");
-  }
-}
-
-function togglePassword(element, password) {
-  const passwordText =
-    element.previousElementSibling.querySelector(".password-text");
-  if (passwordText.innerText === "******") {
-    passwordText.innerText = password;
-    element.innerText = "Hide";
-  } else {
-    passwordText.innerText = "******";
-    element.innerText = "Show";
-  }
+function getQuote() {
+    fetch("https://api.quotable.io/random")
+        .then((response) => response.json())
+        .then((data) => {
+            quoteText.innerHTML = `"${data.content}" - ${data.author}`;
+            getQuoteBtn.classList.remove("loading");
+            getQuoteBtn.textContent = "Get Quote";
+        })
+        .catch((error) => {
+            console.error("Error fetching quote:", error);
+            quoteText.innerHTML = "Failed to fetch a quote. Please try again later.";
+            getQuoteBtn.classList.remove("loading");
+            getQuoteBtn.textContent = "Get Quote";
+        });
 }
