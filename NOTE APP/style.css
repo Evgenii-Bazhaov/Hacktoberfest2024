@@ -1,0 +1,26 @@
+#main{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(135, 235, 150);
+}
+
+.box {
+  width: 200px;
+  height: 500px;
+  background-color: #34db60; 
+  margin: 10px;
+  display: inline-block;
+}
+.box textarea {
+  width: 90%;
+  height: 80%;
+  margin: 10px;
+  resize: none;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
