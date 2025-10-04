@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji card game</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            width: 25%;
+            margin: 0 auto;
+            padding-top: 140px;
+        }
+        .card {
+            display: flex; 
+            height: 100px; 
+            background-color: antiquewhite;
+            border: 2px solid black;
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span id="score">Score: 0</span>
+    </div>
+    <div class="container" id="game-container"></div>
+    
+</body>
+<script src="script.js"></script>
+</html>
