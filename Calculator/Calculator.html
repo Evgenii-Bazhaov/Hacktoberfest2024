@@ -1,33 +1,41 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Calculator.css">
     <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
 </head>
 <body>
     <div class="calculator">
         <input type="text" class="display" disabled>
+
         <div class="calcButton">
-            <button class="button" onclick=" toSolve('7') ">7</button>
-            <button class="button" onclick=" toSolve('8') ">8</button>
-            <button class="button" onclick=" toSolve('9') ">9</button>
-            <button class="acButton" onclick=" reset() ">AC</button>
-            <button class="button" onclick=" toSolve('4') ">4</button>
-            <button class="button" onclick=" toSolve('5') ">5</button>
-            <button class="button" onclick=" toSolve('6') ">6</button>
-            <button class="button" onclick=" toSolve('*') ">x</button>
-            <button class="button" onclick=" toSolve('1') ">1</button>
-            <button class="button" onclick=" toSolve('2') ">2</button>
-            <button class="button" onclick=" toSolve('3') ">3</button>
-            <button class="button" onclick=" toSolve('-') ">-</button>
-            <button class="button" onclick=" toSolve('0') ">0</button>
-            <button class="button" onclick=" toSolve('.') ">.</button>
-            <button class="button" onclick=" toSolve('/') ">÷</button>
-            <button class="button" onclick=" toSolve('+') ">+</button>
-            <button class="eqButton" onclick=" solve() ">=</button>
+            <button class="button" onclick="toSolve('7')">7</button>
+            <button class="button" onclick="toSolve('8')">8</button>
+            <button class="button" onclick="toSolve('9')">9</button>
+            <button class="acButton" onclick="reset()">AC</button>
+
+            <button class="button" onclick="toSolve('4')">4</button>
+            <button class="button" onclick="toSolve('5')">5</button>
+            <button class="button" onclick="toSolve('6')">6</button>
+            <button class="button" onclick="toSolve('*')">×</button>
+
+            <button class="button" onclick="toSolve('1')">1</button>
+            <button class="button" onclick="toSolve('2')">2</button>
+            <button class="button" onclick="toSolve('3')">3</button>
+            <button class="button" onclick="toSolve('-')">−</button>
+
+            <button class="button" onclick="toSolve('0')">0</button>
+            <button class="button" onclick="toSolve('.')">.</button>
+            <button class="button" onclick="toSolve('/')">÷</button>
+            <button class="button" onclick="toSolve('+')">+</button>
+
+            <button class="delButton" onclick="delChar()">⌫</button>
+            <button class="eqButton" onclick="solve()">=</button>
         </div>
     </div>
+
     <script src="Calculator.js"></script>
 </body>
 </html>
