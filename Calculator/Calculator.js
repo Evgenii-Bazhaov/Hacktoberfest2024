@@ -1,21 +1,32 @@
 let currentInput = '';
 
-function toSolve(value){
+function updateDisplay(value) {
+    document.querySelector('.display').value = value;
+}
+
+function toSolve(value) {
     currentInput += value;
-    document.querySelector('.display').value = currentInput;
+    updateDisplay(currentInput);
 }
 
-function reset(){
+function reset() {
     currentInput = '';
-    document.querySelector('.display').value  = '';
+    updateDisplay('');
 }
 
-function solve(){
-    try{
-        var result = eval(currentInput);
-        document.querySelector('.display').value = result;
-        currentInput=result.toString();
-    }catch(error){
-        document.querySelector('.display').value = 'Syntax ERROR';
+function delChar() {
+    currentInput = currentInput.slice(0, -1);
+    updateDisplay(currentInput);
+}
+
+function solve() {
+    try {
+        if (currentInput.trim() === '') return;
+        const result = eval(currentInput);
+        updateDisplay(result);
+        currentInput = result.toString();
+    } catch (error) {
+        updateDisplay('Syntax ERROR');
+        currentInput = '';
     }
 }
